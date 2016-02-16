@@ -15,17 +15,17 @@
 
 @interface MXParticleManager()
 @property(nonatomic,strong) NSMutableArray *particles;
-@property(nonatomic,strong) NSDictionary *particleSystemsDictionary;
+@property(nonatomic,strong) NSMutableDictionary *particleSystemsDictionary;
 @property(nonatomic,weak) MXParticle *particleAvailable;
 @property(nonatomic,weak) MXSceneManager *sceneManager;
 @end
 
 @implementation MXParticleManager
 
-- (instancetype)init:(NSDictionary *)dictionary withScene:(MXSceneManager *)sceneManager
+- (instancetype)initWithScene:(MXSceneManager *)sceneManager
 {
   self = [super init];
-  _particleSystemsDictionary = dictionary[@"particleManager"];
+  _particleSystemsDictionary = [NSMutableDictionary dictionary];
   _sceneManager = sceneManager;
   _particles = [NSMutableArray array];
   
@@ -53,34 +53,24 @@
 }
 
 #pragma mark - Making Particle Effects
-
-- (void)make:(ParticleSystem)particleSystem parentEntity:(MXEntity *)parentEntity loop:(BOOL)loop
+- (void)loadParticleSystem:(id)particleSystem
 {
-  int count = particleSystem == PSBigExplosion ? 30 : particleSystem == PSMidExplosion ? 5 : 1;
+  [self.particleSystemsDictionary setObject:particleSystem forKey:particleSystem[@"particleSystem"]];
+}
+
+- (void)make:(NSString *)particleSystemKey parentEntity:(MXEntity *)parentEntity loop:(BOOL)loop
+{
+  int count = [self.particleSystemsDictionary[particleSystemKey][@"count"] intValue];
   while (count > 0)
   {
     MXParticle *current = self.particleAvailable;
-    [current respawnFrom:parentEntity dictionary:self.particleSystemsDictionary[kExplosionSystem]];
+    [current respawnFrom:parentEntity dictionary:self.particleSystemsDictionary[particleSystemKey]];
     current.autoRespawn = loop;
     self.particleAvailable = self.particleAvailable.next;
     count--;
   }
 }
-/*
-- (void)makeAfterBurn:(MXEntity *)parentEntity
-{
-  int count = 30;
-  while (count > 0)
-  {
-    MXParticle *current = self.particleAvailable;
-    [current respawnFrom:parentEntity dictionary:self.particleSystemsDictionary[kAfterburnSystem]];
-    [current randomizePosition];
-    current.autoRespawn = YES;
-    self.particleAvailable = self.particleAvailable.next;
-    count--;
-  }
-}
-*/
+
 #pragma mark - Update & Draw
 - (void)setAvailableParticle:(MXParticle *)particle
 {

@@ -30,12 +30,10 @@
 #pragma mark - LoadScene
 - (void)loadScene
 {
-  [[MXGameEngine sharedInstance] load];
-  
+  [[MXGameEngine sharedInstance] load];  
   NSDictionary *gameJson = [MXUtils jsonFromFile:@"globalConfig.json"];
   self.camera = [[MXCamera alloc] init:gameJson withScene:self];
-  gameJson = [MXUtils jsonFromFile:@"particlesConfig.json"];
-  self.particleManager = [[MXParticleManager alloc] init:gameJson withScene:self];
+  self.particleManager = [[MXParticleManager alloc] initWithScene:self];
 }
 
 - (void)unloadScene
@@ -49,17 +47,12 @@
 #pragma mark - Update & Draw
 - (void)update:(NSTimeInterval)timeSinceLastUpdate
 {
-  //--- fixing possibile timeSinceLastUpdate fluctuations ---//
-  //  timeSinceLastUpdate = TARGET_IPHONE_SIMULATOR || (timeSinceLastUpdate > 0.01 && timeSinceLastUpdate < 0.02) ? timeSinceLastUpdate : 0.016;
-  
   [self.camera update:timeSinceLastUpdate];
   [self.particleManager update:timeSinceLastUpdate];
 }
 
 - (void)draw
 {
-  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-  
   glDepthMask(GL_FALSE);
   glEnable(GL_BLEND);
   glBlendFunc(GL_ONE, GL_ONE);

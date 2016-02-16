@@ -1,12 +1,12 @@
 //
-//  MXOpenGLView.m
+//  MXParticleOpenGLView.m
 //  MXParticleEditor
 //
 //  Created by mugx on 11/02/16.
 //  Copyright © 2016 mugx. All rights reserved.
 //
 
-#import "MXOpenGLView.h"
+#import "MXParticleOpenGLView.h"
 #import "MXGameEngine.h"
 #import "MXSceneManager.h"
 #import "MXEntity.h"
@@ -21,7 +21,7 @@ typedef NS_ENUM(NSUInteger, SceneStatus) {
 #define UPDATE_TIME_BASE 0.025
 #define UPDATE_TIME_INCR_STEP 0.01
 
-@interface MXOpenGLView()
+@interface MXParticleOpenGLView()
 @property(nonatomic, strong) NSTimer *timer;
 @property(nonatomic, strong) MXSceneManager *scene;
 @property(nonatomic, strong) NSTimer *renderTimer;
@@ -29,10 +29,11 @@ typedef NS_ENUM(NSUInteger, SceneStatus) {
 @property(nonatomic, assign) SceneStatus status;
 @property(nonatomic, assign) float updateTime;
 @property(nonatomic, assign) int incrSteps;
-@property IBOutlet NSButton *button;
+@property(nonatomic, strong) NSDictionary *currentParticleSystem;
+@property IBOutlet NSButton *speedButton;
 @end
 
-@implementation MXOpenGLView
+@implementation MXParticleOpenGLView
 
 - (void)startupGL
 {
@@ -46,6 +47,7 @@ typedef NS_ENUM(NSUInteger, SceneStatus) {
 {
   self.scene = [MXSceneManager new];
   [self.scene loadScene];
+  [self loadParticleSystem:self.currentParticleSystem];
 }
 
 - (void)initTimer:(int)incrSteps
@@ -53,14 +55,31 @@ typedef NS_ENUM(NSUInteger, SceneStatus) {
   self.incrSteps = incrSteps;
   if (incrSteps >= 0)
   {
-    [self.button setTitle:[NSString stringWithFormat:@"%dx", 1 / 1 + incrSteps]];
+    [self.speedButton setTitle:[NSString stringWithFormat:@"%dx", 1 / 1 + incrSteps]];
   }
   else
   {
-    [self.button setTitle:[NSString stringWithFormat:@"1/%dx", -(-1 + incrSteps)]];
+    [self.speedButton setTitle:[NSString stringWithFormat:@"1/%dx", -(-1 + incrSteps)]];
   }
   self.timer = [NSTimer scheduledTimerWithTimeInterval:UPDATE_TIME_BASE - UPDATE_TIME_INCR_STEP * self.incrSteps target:self selector:@selector(updateWorld:) userInfo:nil repeats:YES];
   self.timer.tolerance = 0;
+}
+
+- (void)dealloc
+{
+  [self.timer invalidate];
+  [self.scene unloadScene];
+}
+
+#pragma mark - Load
+
+- (void)loadParticleSystem:(id)particleSystem
+{
+  if (!particleSystem) return;
+  
+  self.currentParticleSystem = particleSystem;
+  self.currentParticleSystemKey = particleSystem[@"particleSystem"];
+  [self.scene.particleManager loadParticleSystem:particleSystem];
 }
 
 #pragma mark -Update & Draw
@@ -96,13 +115,13 @@ typedef NS_ENUM(NSUInteger, SceneStatus) {
 - (IBAction)loopTouched:(id)sender
 {
   self.status = SSPlay;
-  [self.scene.particleManager make:PSMidExplosion parentEntity:nil loop:YES];
+  [self.scene.particleManager make:self.currentParticleSystemKey parentEntity:nil loop:YES];
 }
 
 - (IBAction)playTouched:(id)sender
 {
   self.status = SSPlay;
-  [self.scene.particleManager make:PSMidExplosion parentEntity:nil loop:NO];
+  [self.scene.particleManager make:self.currentParticleSystemKey parentEntity:nil loop:NO];
 }
 
 - (IBAction)pauseTouched:(id)sender
@@ -115,7 +134,7 @@ typedef NS_ENUM(NSUInteger, SceneStatus) {
   self.status = SSStop;
   [self.timer invalidate];
   [self initTimer:0];
-  self.scene = nil;
+  [self.scene unloadScene];
   [self initScene];
 }
 

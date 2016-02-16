@@ -16,7 +16,7 @@
 		1D3192901C6E3F8600188614 /* MXMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3192771C6E3F8600188614 /* MXMathUtils.m */; };
 		1D3192911C6E3F8600188614 /* MXMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3192791C6E3F8600188614 /* MXMesh.m */; };
 		1D3192921C6E3F8600188614 /* MXMeshManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D31927B1C6E3F8600188614 /* MXMeshManager.m */; };
-		1D3192931C6E3F8600188614 /* MXOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D31927D1C6E3F8600188614 /* MXOpenGLView.m */; };
+		1D3192931C6E3F8600188614 /* MXParticleOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D31927D1C6E3F8600188614 /* MXParticleOpenGLView.m */; };
 		1D3192941C6E3F8600188614 /* MXParticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D31927F1C6E3F8600188614 /* MXParticle.m */; };
 		1D3192951C6E3F8600188614 /* MXParticleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3192811C6E3F8600188614 /* MXParticleManager.m */; };
 		1D3192961C6E3F8600188614 /* MXSceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3192831C6E3F8600188614 /* MXSceneManager.m */; };
@@ -24,23 +24,28 @@
 		1D3192981C6E3F8600188614 /* MXShaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3192871C6E3F8600188614 /* MXShaderManager.m */; };
 		1D3192991C6E3F8600188614 /* MXTextureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3192891C6E3F8600188614 /* MXTextureManager.m */; };
 		1D31929A1C6E3F8600188614 /* MXUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D31928B1C6E3F8600188614 /* MXUtils.m */; };
-		1D31929C1C6E3FCC00188614 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D31929B1C6E3FCC00188614 /* MainMenu.xib */; };
+		1D31929C1C6E3FCC00188614 /* MXParticleMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D31929B1C6E3FCC00188614 /* MXParticleMainView.xib */; };
 		1D3192AA1C6E404800188614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D31929D1C6E404800188614 /* Assets.xcassets */; };
 		1D3192AC1C6E404800188614 /* jet_fighter_5.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 1D31929F1C6E404800188614 /* jet_fighter_5.3DS */; };
 		1D3192AE1C6E404800188614 /* particle_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D3192A11C6E404800188614 /* particle_10.png */; };
 		1D3192AF1C6E404800188614 /* particleExplosion.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D3192A21C6E404800188614 /* particleExplosion.png */; };
-		1D3192B01C6E404800188614 /* particlesConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3192A31C6E404800188614 /* particlesConfig.json */; };
 		1D3192B11C6E404800188614 /* pauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D3192A41C6E404800188614 /* pauseButton.png */; };
 		1D3192B21C6E404800188614 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D3192A51C6E404800188614 /* playButton.png */; };
 		1D3192B31C6E404800188614 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1D3192A61C6E404800188614 /* Shader.fsh */; };
 		1D3192B41C6E404800188614 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 1D3192A71C6E404800188614 /* Shader.vsh */; };
 		1D3192B51C6E404800188614 /* sphere.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 1D3192A81C6E404800188614 /* sphere.3ds */; };
 		1D3192B61C6E404800188614 /* stopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D3192A91C6E404800188614 /* stopButton.png */; };
-		1D3192BB1C6E446B00188614 /* MXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3192BA1C6E446B00188614 /* MXTextView.m */; };
+		1D3192BB1C6E446B00188614 /* MXParticleEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3192BA1C6E446B00188614 /* MXParticleEditorView.m */; };
+		1D72CA721C72E92200ABDC31 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D72CA711C72E92200ABDC31 /* save.png */; };
+		1D72CA741C72E98E00ABDC31 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D72CA731C72E98E00ABDC31 /* add.png */; };
+		1D72CA761C72EA4500ABDC31 /* trashCan.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D72CA751C72EA4500ABDC31 /* trashCan.png */; };
+		1D72CA781C72EA8F00ABDC31 /* load.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D72CA771C72EA8F00ABDC31 /* load.png */; };
 		1D88E7D81C6C0B0400C4EA86 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D88E7D71C6C0B0400C4EA86 /* OpenGL.framework */; };
 		1D88E7DA1C6C0B1500C4EA86 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D88E7D91C6C0B1500C4EA86 /* GLKit.framework */; };
 		1D9593121C6F0C3000E40236 /* globalConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9593111C6F0C3000E40236 /* globalConfig.json */; };
 		1D9593141C6F3BAD00E40236 /* loopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9593131C6F3BAD00E40236 /* loopButton.png */; };
+		1DA3F95C1C72F8620054EEC9 /* particleSystemConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DA3F95B1C72F8620054EEC9 /* particleSystemConfig.json */; };
+		1DA3F95E1C72F8670054EEC9 /* explosionConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DA3F95D1C72F8670054EEC9 /* explosionConfig.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,8 +66,8 @@
 		1D3192791C6E3F8600188614 /* MXMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXMesh.m; path = Sources/MXMesh.m; sourceTree = "<group>"; };
 		1D31927A1C6E3F8600188614 /* MXMeshManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXMeshManager.h; path = Sources/MXMeshManager.h; sourceTree = "<group>"; };
 		1D31927B1C6E3F8600188614 /* MXMeshManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXMeshManager.m; path = Sources/MXMeshManager.m; sourceTree = "<group>"; };
-		1D31927C1C6E3F8600188614 /* MXOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXOpenGLView.h; path = Sources/MXOpenGLView.h; sourceTree = "<group>"; };
-		1D31927D1C6E3F8600188614 /* MXOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXOpenGLView.m; path = Sources/MXOpenGLView.m; sourceTree = "<group>"; };
+		1D31927C1C6E3F8600188614 /* MXParticleOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXParticleOpenGLView.h; path = Sources/MXParticleOpenGLView.h; sourceTree = "<group>"; };
+		1D31927D1C6E3F8600188614 /* MXParticleOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXParticleOpenGLView.m; path = Sources/MXParticleOpenGLView.m; sourceTree = "<group>"; };
 		1D31927E1C6E3F8600188614 /* MXParticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXParticle.h; path = Sources/MXParticle.h; sourceTree = "<group>"; };
 		1D31927F1C6E3F8600188614 /* MXParticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXParticle.m; path = Sources/MXParticle.m; sourceTree = "<group>"; };
 		1D3192801C6E3F8600188614 /* MXParticleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXParticleManager.h; path = Sources/MXParticleManager.h; sourceTree = "<group>"; };
@@ -77,26 +82,31 @@
 		1D3192891C6E3F8600188614 /* MXTextureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXTextureManager.m; path = Sources/MXTextureManager.m; sourceTree = "<group>"; };
 		1D31928A1C6E3F8600188614 /* MXUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXUtils.h; path = Sources/MXUtils.h; sourceTree = "<group>"; };
 		1D31928B1C6E3F8600188614 /* MXUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXUtils.m; path = Sources/MXUtils.m; sourceTree = "<group>"; };
-		1D31929B1C6E3FCC00188614 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = Sources/MainMenu.xib; sourceTree = "<group>"; };
+		1D31929B1C6E3FCC00188614 /* MXParticleMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MXParticleMainView.xib; path = Sources/MXParticleMainView.xib; sourceTree = "<group>"; };
 		1D31929D1C6E404800188614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		1D31929E1C6E404800188614 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		1D31929F1C6E404800188614 /* jet_fighter_5.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; name = jet_fighter_5.3DS; path = Resources/jet_fighter_5.3DS; sourceTree = "<group>"; };
 		1D3192A11C6E404800188614 /* particle_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = particle_10.png; path = Resources/particle_10.png; sourceTree = "<group>"; };
 		1D3192A21C6E404800188614 /* particleExplosion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = particleExplosion.png; path = Resources/particleExplosion.png; sourceTree = "<group>"; };
-		1D3192A31C6E404800188614 /* particlesConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = particlesConfig.json; path = Resources/particlesConfig.json; sourceTree = "<group>"; };
 		1D3192A41C6E404800188614 /* pauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pauseButton.png; path = Resources/pauseButton.png; sourceTree = "<group>"; };
 		1D3192A51C6E404800188614 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playButton.png; path = Resources/playButton.png; sourceTree = "<group>"; };
 		1D3192A61C6E404800188614 /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Resources/Shader.fsh; sourceTree = "<group>"; };
 		1D3192A71C6E404800188614 /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Resources/Shader.vsh; sourceTree = "<group>"; };
 		1D3192A81C6E404800188614 /* sphere.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; name = sphere.3ds; path = Resources/sphere.3ds; sourceTree = "<group>"; };
 		1D3192A91C6E404800188614 /* stopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stopButton.png; path = Resources/stopButton.png; sourceTree = "<group>"; };
-		1D3192B91C6E446B00188614 /* MXTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXTextView.h; path = Sources/MXTextView.h; sourceTree = "<group>"; };
-		1D3192BA1C6E446B00188614 /* MXTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXTextView.m; path = Sources/MXTextView.m; sourceTree = "<group>"; };
+		1D3192B91C6E446B00188614 /* MXParticleEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXParticleEditorView.h; path = Sources/MXParticleEditorView.h; sourceTree = "<group>"; };
+		1D3192BA1C6E446B00188614 /* MXParticleEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXParticleEditorView.m; path = Sources/MXParticleEditorView.m; sourceTree = "<group>"; };
+		1D72CA711C72E92200ABDC31 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = save.png; path = Resources/save.png; sourceTree = "<group>"; };
+		1D72CA731C72E98E00ABDC31 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add.png; path = Resources/add.png; sourceTree = "<group>"; };
+		1D72CA751C72EA4500ABDC31 /* trashCan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trashCan.png; path = Resources/trashCan.png; sourceTree = "<group>"; };
+		1D72CA771C72EA8F00ABDC31 /* load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = load.png; path = Resources/load.png; sourceTree = "<group>"; };
 		1D88E79D1C6BFCCC00C4EA86 /* MXParticleEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MXParticleEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D88E7D71C6C0B0400C4EA86 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		1D88E7D91C6C0B1500C4EA86 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		1D9593111C6F0C3000E40236 /* globalConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = globalConfig.json; path = Resources/globalConfig.json; sourceTree = "<group>"; };
 		1D9593131C6F3BAD00E40236 /* loopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loopButton.png; path = Resources/loopButton.png; sourceTree = "<group>"; };
+		1DA3F95B1C72F8620054EEC9 /* particleSystemConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = particleSystemConfig.json; path = Resources/particleSystemConfig.json; sourceTree = "<group>"; };
+		1DA3F95D1C72F8670054EEC9 /* explosionConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = explosionConfig.json; path = Resources/explosionConfig.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +142,10 @@
 				1D9593131C6F3BAD00E40236 /* loopButton.png */,
 				1D291FF91C719CA600E64DBB /* incrSpeed.png */,
 				1D291FFA1C719CA600E64DBB /* decrSpeed.png */,
+				1D72CA711C72E92200ABDC31 /* save.png */,
+				1D72CA771C72EA8F00ABDC31 /* load.png */,
+				1D72CA731C72E98E00ABDC31 /* add.png */,
+				1D72CA751C72EA4500ABDC31 /* trashCan.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -214,11 +228,11 @@
 			children = (
 				1D31926D1C6E3F8600188614 /* AppDelegate.h */,
 				1D31926E1C6E3F8600188614 /* AppDelegate.m */,
-				1D31929B1C6E3FCC00188614 /* MainMenu.xib */,
-				1D31927C1C6E3F8600188614 /* MXOpenGLView.h */,
-				1D31927D1C6E3F8600188614 /* MXOpenGLView.m */,
-				1D3192B91C6E446B00188614 /* MXTextView.h */,
-				1D3192BA1C6E446B00188614 /* MXTextView.m */,
+				1D31929B1C6E3FCC00188614 /* MXParticleMainView.xib */,
+				1D31927C1C6E3F8600188614 /* MXParticleOpenGLView.h */,
+				1D31927D1C6E3F8600188614 /* MXParticleOpenGLView.m */,
+				1D3192B91C6E446B00188614 /* MXParticleEditorView.h */,
+				1D3192BA1C6E446B00188614 /* MXParticleEditorView.m */,
 				1D88E7B21C6C099000C4EA86 /* MXEngine */,
 			);
 			name = Sources;
@@ -267,7 +281,8 @@
 				1D3192B71C6E405300188614 /* shader */,
 				1D3192B81C6E406500188614 /* images */,
 				1D9593111C6F0C3000E40236 /* globalConfig.json */,
-				1D3192A31C6E404800188614 /* particlesConfig.json */,
+				1DA3F95B1C72F8620054EEC9 /* particleSystemConfig.json */,
+				1DA3F95D1C72F8670054EEC9 /* explosionConfig.json */,
 				1D3192A81C6E404800188614 /* sphere.3ds */,
 				1D31929F1C6E404800188614 /* jet_fighter_5.3DS */,
 			);
@@ -350,18 +365,23 @@
 			files = (
 				1D291FFC1C719CA600E64DBB /* decrSpeed.png in Resources */,
 				1D3192B21C6E404800188614 /* playButton.png in Resources */,
+				1D72CA761C72EA4500ABDC31 /* trashCan.png in Resources */,
 				1D3192AA1C6E404800188614 /* Assets.xcassets in Resources */,
-				1D3192B01C6E404800188614 /* particlesConfig.json in Resources */,
 				1D3192B41C6E404800188614 /* Shader.vsh in Resources */,
 				1D9593121C6F0C3000E40236 /* globalConfig.json in Resources */,
 				1D3192B51C6E404800188614 /* sphere.3ds in Resources */,
 				1D291FFB1C719CA600E64DBB /* incrSpeed.png in Resources */,
-				1D31929C1C6E3FCC00188614 /* MainMenu.xib in Resources */,
+				1D31929C1C6E3FCC00188614 /* MXParticleMainView.xib in Resources */,
+				1D72CA741C72E98E00ABDC31 /* add.png in Resources */,
+				1D72CA781C72EA8F00ABDC31 /* load.png in Resources */,
 				1D3192AC1C6E404800188614 /* jet_fighter_5.3DS in Resources */,
+				1D72CA721C72E92200ABDC31 /* save.png in Resources */,
 				1D3192B11C6E404800188614 /* pauseButton.png in Resources */,
 				1D3192AF1C6E404800188614 /* particleExplosion.png in Resources */,
+				1DA3F95C1C72F8620054EEC9 /* particleSystemConfig.json in Resources */,
 				1D3192AE1C6E404800188614 /* particle_10.png in Resources */,
 				1D9593141C6F3BAD00E40236 /* loopButton.png in Resources */,
+				1DA3F95E1C72F8670054EEC9 /* explosionConfig.json in Resources */,
 				1D3192B31C6E404800188614 /* Shader.fsh in Resources */,
 				1D3192B61C6E404800188614 /* stopButton.png in Resources */,
 			);
@@ -385,8 +405,8 @@
 				1D3192981C6E3F8600188614 /* MXShaderManager.m in Sources */,
 				1D3192911C6E3F8600188614 /* MXMesh.m in Sources */,
 				1D31928C1C6E3F8600188614 /* AppDelegate.m in Sources */,
-				1D3192931C6E3F8600188614 /* MXOpenGLView.m in Sources */,
-				1D3192BB1C6E446B00188614 /* MXTextView.m in Sources */,
+				1D3192931C6E3F8600188614 /* MXParticleOpenGLView.m in Sources */,
+				1D3192BB1C6E446B00188614 /* MXParticleEditorView.m in Sources */,
 				1D31928F1C6E3F8600188614 /* MXGameEngine.m in Sources */,
 				1D3192921C6E3F8600188614 /* MXMeshManager.m in Sources */,
 				1D31928E1C6E3F8600188614 /* MXEntity.m in Sources */,

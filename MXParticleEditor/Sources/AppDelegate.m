@@ -7,14 +7,14 @@
 //
 
 #import "AppDelegate.h"
-#import "MXOpenGLView.h"
-#import "MXTextView.h"
+#import "MXParticleOpenGLView.h"
+#import "MXParticleEditorView.h"
 #import "MXUtils.h"
 
 @interface AppDelegate ()
 @property IBOutlet NSWindow *window;
-@property IBOutlet MXOpenGLView *openglView;
-@property IBOutlet MXTextView *textView;
+@property IBOutlet MXParticleOpenGLView *openGLView;
+@property IBOutlet MXParticleEditorView *editorView;
 @end
 
 @implementation AppDelegate
@@ -24,12 +24,8 @@ int main(int argc, const char * argv[]) {  return NSApplicationMain(argc, argv);
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 //  self.window.isZoomed = YES;
-  [self.openglView startupGL];
-  
-  NSString *fileName = @"particlesConfig.json";
-  NSString *file = [[NSBundle mainBundle] pathForResource:[fileName stringByDeletingPathExtension] ofType:[fileName pathExtension]];
-  NSString *json = [NSString stringWithContentsOfFile:file encoding:NSASCIIStringEncoding error:nil];
-  [self.textView setString:json];
+  [self.openGLView startupGL];
+  self.editorView.glView = self.openGLView;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification

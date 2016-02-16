@@ -12,16 +12,10 @@
 @class MXSceneManager;
 @class MXEntity;
 
-typedef NS_ENUM(NSUInteger, ParticleSystem) {
-  PSAfterburn,
-  PSBigExplosion,
-  PSMidExplosion,
-  PSSmallExplosion
-};
- 
 @interface MXParticleManager : NSObject
-- (instancetype)init:(NSDictionary *)dictionary withScene:(MXSceneManager *)sceneManager;
-- (void)make:(ParticleSystem)particleSystem parentEntity:(MXEntity *)parentEntity loop:(BOOL)loop;
+- (instancetype)initWithScene:(MXSceneManager *)sceneManager;
+- (void)loadParticleSystem:(id)particleSystem;
+- (void)make:(NSString *)particleSystemKey parentEntity:(MXEntity *)parentEntity loop:(BOOL)loop;
 - (void)update:(NSTimeInterval)timeSinceLastUpdate;
 - (void)draw;
 @end

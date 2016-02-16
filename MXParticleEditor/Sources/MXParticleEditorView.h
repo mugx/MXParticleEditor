@@ -7,7 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MXParticleOpenGLView.h"
 
-@interface MXTextView : NSTextView <NSTextViewDelegate>
-
+@interface MXParticleEditorView : NSView
+@property(nonatomic,weak) MXParticleOpenGLView *glView;
 @end
