@@ -429,64 +429,8 @@
                                             <outlet property="button" destination="lGP-6R-Hfl" id="Fxs-GP-qVu"/>
                                         </connections>
                                     </openGLView>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tpj-7Z-fkm">
-                                        <rect key="frame" x="10" y="697" width="40" height="42"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="DEa-gE-3ne"/>
-                                            <constraint firstAttribute="height" constant="40" id="iWW-C2-hiT"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="loopButton" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="a0a-OC-u1g">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="loopTouched:" target="J4R-qY-ufr" id="5Bz-td-bNJ"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a47-zb-ct0">
-                                        <rect key="frame" x="60" y="697" width="40" height="42"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="HOJ-mE-ifh"/>
-                                            <constraint firstAttribute="height" constant="40" id="ah8-KD-qgZ"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="playButton" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jKZ-lT-jxo">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="playTouched:" target="J4R-qY-ufr" id="wpm-bt-lKa"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="V7S-1W-v32">
-                                        <rect key="frame" x="110" y="697" width="40" height="42"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="BYB-3i-Zig"/>
-                                            <constraint firstAttribute="height" constant="40" id="Nct-3T-3Ek"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="pauseButton" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OEh-Vu-wE0">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="pauseTouched:" target="J4R-qY-ufr" id="Tuy-tV-6gA"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SO8-8n-yO1">
-                                        <rect key="frame" x="160" y="697" width="40" height="42"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="4Ab-JP-Ckt"/>
-                                            <constraint firstAttribute="width" constant="40" id="m6q-hB-Uii"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="stopButton" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zd7-ba-QKk">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="stopTouched:" target="J4R-qY-ufr" id="vS8-C9-lkw"/>
-                                        </connections>
-                                    </button>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IBS-XO-9mA">
-                                        <rect key="frame" x="609" y="722" width="96" height="16"/>
+                                        <rect key="frame" x="609" y="710" width="96" height="16"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Lo-qU-7jW">
                                                 <rect key="frame" x="0.0" y="-1" width="20" height="17"/>
@@ -503,7 +447,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="M8V-GV-zXu"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="inline" title="x1" bezelStyle="inline" image="5AF1C0FC-D5BA-43ED-B909-772054370459" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="BrL-Kf-Ccg">
+                                                <buttonCell key="cell" type="inline" title="x1" bezelStyle="inline" image="4949628F-FE3D-4499-AB1C-221FECEA9832" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="BrL-Kf-Ccg">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="smallSystemBold"/>
                                                 </buttonCell>
@@ -530,21 +474,88 @@
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OlM-Zw-hTx">
+                                        <rect key="frame" x="10" y="698" width="184" height="40"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tpj-7Z-fkm" userLabel="loop button">
+                                                <rect key="frame" x="0.0" y="-1" width="40" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="DEa-gE-3ne"/>
+                                                    <constraint firstAttribute="height" constant="40" id="iWW-C2-hiT"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="loopButton" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="a0a-OC-u1g">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="loopTouched:" target="J4R-qY-ufr" id="5Bz-td-bNJ"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a47-zb-ct0" userLabel="play button">
+                                                <rect key="frame" x="48" y="-1" width="40" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="HOJ-mE-ifh"/>
+                                                    <constraint firstAttribute="height" constant="40" id="ah8-KD-qgZ"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="playButton" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jKZ-lT-jxo">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="playTouched:" target="J4R-qY-ufr" id="wpm-bt-lKa"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="V7S-1W-v32" userLabel="pause button">
+                                                <rect key="frame" x="96" y="-1" width="40" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="BYB-3i-Zig"/>
+                                                    <constraint firstAttribute="height" constant="40" id="Nct-3T-3Ek"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="pauseButton" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OEh-Vu-wE0">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="pauseTouched:" target="J4R-qY-ufr" id="Tuy-tV-6gA"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SO8-8n-yO1" userLabel="stop button">
+                                                <rect key="frame" x="144" y="-1" width="40" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="4Ab-JP-Ckt"/>
+                                                    <constraint firstAttribute="width" constant="40" id="m6q-hB-Uii"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="stopButton" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zd7-ba-QKk">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="stopTouched:" target="J4R-qY-ufr" id="vS8-C9-lkw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="SO8-8n-yO1" firstAttribute="top" secondItem="7Fg-qc-vkA" secondAttribute="top" constant="10" id="0FP-y7-8IR"/>
-                                    <constraint firstItem="tpj-7Z-fkm" firstAttribute="leading" secondItem="7Fg-qc-vkA" secondAttribute="leading" constant="10" id="8Hn-uC-0n6"/>
+                                    <constraint firstItem="OlM-Zw-hTx" firstAttribute="top" secondItem="7Fg-qc-vkA" secondAttribute="top" constant="10" id="15O-LP-ar3"/>
                                     <constraint firstAttribute="bottom" secondItem="J4R-qY-ufr" secondAttribute="bottom" id="Bms-uN-MwG"/>
-                                    <constraint firstItem="IBS-XO-9mA" firstAttribute="top" secondItem="7Fg-qc-vkA" secondAttribute="top" constant="10" id="GDO-Ja-Yyw"/>
                                     <constraint firstAttribute="trailing" secondItem="J4R-qY-ufr" secondAttribute="trailing" id="HIR-39-OP1"/>
-                                    <constraint firstItem="a47-zb-ct0" firstAttribute="top" secondItem="7Fg-qc-vkA" secondAttribute="top" constant="10" id="Iyw-dv-7lv"/>
-                                    <constraint firstItem="tpj-7Z-fkm" firstAttribute="top" secondItem="7Fg-qc-vkA" secondAttribute="top" constant="10" id="P3Y-XJ-HqA"/>
-                                    <constraint firstItem="a47-zb-ct0" firstAttribute="leading" secondItem="tpj-7Z-fkm" secondAttribute="trailing" constant="10" id="Uot-VD-tt4"/>
-                                    <constraint firstItem="V7S-1W-v32" firstAttribute="top" secondItem="7Fg-qc-vkA" secondAttribute="top" constant="10" id="VG5-Ta-fQY"/>
                                     <constraint firstItem="J4R-qY-ufr" firstAttribute="leading" secondItem="7Fg-qc-vkA" secondAttribute="leading" id="Wqg-Cq-nJL"/>
-                                    <constraint firstItem="SO8-8n-yO1" firstAttribute="leading" secondItem="V7S-1W-v32" secondAttribute="trailing" constant="10" id="Z9N-7t-9s8"/>
                                     <constraint firstAttribute="trailing" secondItem="IBS-XO-9mA" secondAttribute="trailing" constant="10" id="Zv2-oc-Dvq"/>
-                                    <constraint firstItem="V7S-1W-v32" firstAttribute="leading" secondItem="a47-zb-ct0" secondAttribute="trailing" constant="10" id="lHH-8u-cX6"/>
+                                    <constraint firstItem="OlM-Zw-hTx" firstAttribute="leading" secondItem="7Fg-qc-vkA" secondAttribute="leading" constant="10" id="bVb-4r-VjP"/>
+                                    <constraint firstItem="IBS-XO-9mA" firstAttribute="centerY" secondItem="OlM-Zw-hTx" secondAttribute="centerY" id="cRf-yj-DBf"/>
                                     <constraint firstItem="J4R-qY-ufr" firstAttribute="top" secondItem="7Fg-qc-vkA" secondAttribute="top" id="zx2-t7-9ip"/>
                                 </constraints>
                             </customView>
@@ -606,7 +617,7 @@
         </window>
     </objects>
     <resources>
-        <image name="5AF1C0FC-D5BA-43ED-B909-772054370459" width="1" height="1">
+        <image name="4949628F-FE3D-4499-AB1C-221FECEA9832" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
