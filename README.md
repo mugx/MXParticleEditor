@@ -2,4 +2,4 @@
 
 A particle system editor
 
-<img src="/MXParticleEditor/Resources/imageSplash.png" alt="CyyC" width="500px"/>
+<img src="/MXParticleEditor/Resources/imageSplash.png" alt="MXParticleEditor" width="500px"/>
