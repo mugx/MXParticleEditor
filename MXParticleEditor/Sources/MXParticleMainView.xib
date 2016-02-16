@@ -145,7 +145,13 @@
                                     <openGLView hidden="YES" colorSize="5bit_RGB_8bit_Alpha" depthSize="24bit" samplingRate="4" numberOfAuxiliaryBuffers="1" useAuxiliaryDepthBufferStencil="NO" useDoubleBufferingEnabled="YES" allowOffline="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4R-qY-ufr" customClass="MXParticleOpenGLView">
                                         <rect key="frame" x="0.0" y="0.0" width="715" height="748"/>
                                         <connections>
+                                            <outlet property="loopButton" destination="tpj-7Z-fkm" id="5hc-Ej-Op0"/>
+                                            <outlet property="pauseButton" destination="V7S-1W-v32" id="M31-zm-3Nw"/>
+                                            <outlet property="playButton" destination="a47-zb-ct0" id="d3k-AT-Kvg"/>
                                             <outlet property="speedButton" destination="lGP-6R-Hfl" id="IqA-pG-EUB"/>
+                                            <outlet property="speedDecrButton" destination="7Lo-qU-7jW" id="oH0-Sd-hlF"/>
+                                            <outlet property="speedIncrButton" destination="LbI-pQ-20b" id="zWJ-ef-yKR"/>
+                                            <outlet property="stopButton" destination="SO8-8n-yO1" id="nHj-VY-cUY"/>
                                         </connections>
                                     </openGLView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OlM-Zw-hTx">
@@ -239,7 +245,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="M8V-GV-zXu"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="inline" title="x1" bezelStyle="inline" image="D9FFACB9-05F0-450A-81EF-1309E1A7A70F" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="BrL-Kf-Ccg">
+                                                <buttonCell key="cell" type="inline" title="x1" bezelStyle="inline" image="D7243126-1226-4FCD-8F39-8BE0F9E8F908" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="BrL-Kf-Ccg">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="smallSystemBold"/>
                                                 </buttonCell>
@@ -409,7 +415,7 @@
         </window>
     </objects>
     <resources>
-        <image name="D9FFACB9-05F0-450A-81EF-1309E1A7A70F" width="1" height="1">
+        <image name="D7243126-1226-4FCD-8F39-8BE0F9E8F908" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

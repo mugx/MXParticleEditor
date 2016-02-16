@@ -30,7 +30,13 @@ typedef NS_ENUM(NSUInteger, SceneStatus) {
 @property(nonatomic, assign) float updateTime;
 @property(nonatomic, assign) int incrSteps;
 @property(nonatomic, strong) NSDictionary *currentParticleSystem;
+@property IBOutlet NSButton *loopButton;
+@property IBOutlet NSButton *playButton;
+@property IBOutlet NSButton *pauseButton;
+@property IBOutlet NSButton *stopButton;
 @property IBOutlet NSButton *speedButton;
+@property IBOutlet NSButton *speedIncrButton;
+@property IBOutlet NSButton *speedDecrButton;
 @end
 
 @implementation MXParticleOpenGLView
@@ -75,7 +81,27 @@ typedef NS_ENUM(NSUInteger, SceneStatus) {
 
 - (void)loadParticleSystem:(id)particleSystem
 {
-  if (!particleSystem) return;
+  if (!particleSystem)
+  {
+    self.loopButton.enabled = NO;
+    self.playButton.enabled = NO;
+    self.pauseButton.enabled = NO;
+    self.stopButton.enabled = NO;
+    self.speedButton.enabled = NO;
+    self.speedIncrButton.enabled = NO;
+    self.speedDecrButton.enabled = NO;
+    return;
+  }
+  else
+  {
+    self.loopButton.enabled = YES;
+    self.playButton.enabled = YES;
+    self.pauseButton.enabled = YES;
+    self.stopButton.enabled = YES;
+    self.speedButton.enabled = YES;
+    self.speedIncrButton.enabled = YES;
+    self.speedDecrButton.enabled = YES;
+  }
   
   self.currentParticleSystem = particleSystem;
   self.currentParticleSystemKey = particleSystem[@"particleSystem"];
