@@ -1,6 +1,6 @@
 {
-  "particleSystem":"explosion",
-  "count":"5",
+  "particleSystem":"particleSystemTemplate",
+  "count":"1",
   "texture":"particleExplosion.png",
   "model":"sphere.3ds",
   "centerOfCoordinateSystemOffset":{"x":"0","y":"0","z":"0"},

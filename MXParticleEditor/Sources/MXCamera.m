@@ -7,7 +7,7 @@
 //
 
 #import "MXCamera.h"
-#import "MXMacros.h"
+#import "MXMathUtils.h"
 
 @interface MXCamera()
 @property(nonatomic,weak) MXSceneManager *sceneManager;

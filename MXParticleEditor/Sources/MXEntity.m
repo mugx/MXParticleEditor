@@ -10,8 +10,6 @@
 #import "MXGameEngine.h"
 #import "MXSceneManager.h"
 
-#define BUFFER_OFFSET(i) ((char *)NULL + (i))
-
 @interface MXEntity()
 @end
 

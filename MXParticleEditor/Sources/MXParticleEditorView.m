@@ -7,10 +7,14 @@
 //
 
 #import "MXParticleEditorView.h"
+#import "MXHistoryPickerViewController.h"
 #import "MXUtils.h"
 
 @interface MXParticleEditorView()
 @property IBOutlet NSTextView *textView;
+@property IBOutlet NSButton *historyButton;
+@property IBOutlet NSButton *saveButton;
+@property IBOutlet NSButton *loadButton;
 @property(nonatomic,strong) NSString *json;
 @end
 
@@ -18,7 +22,7 @@
 
 - (void)awakeFromNib
 {
-  //  self.delegate = self;
+  [self refreshButtons];
 }
 
 - (BOOL)textView:(NSTextView *)textView shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(nullable NSString *)replacementString
@@ -29,7 +33,18 @@
   return YES;
 }
 
-- (IBAction)newParticleSystemTouched:(id)sender
+#pragma mark - Refresh
+
+- (void)refreshButtons
+{
+  self.historyButton.enabled = self.glView.scene.particleManager.particleSystemsDictionary.count > 0;
+  self.saveButton.enabled = NO;
+  self.loadButton.enabled = YES;
+}
+
+#pragma mark - Actions
+
+- (IBAction)newButtonTouched:(id)sender
 {
   NSString *fileName = @"particleSystemConfig.json";
   NSString *file = [[NSBundle mainBundle] pathForResource:[fileName stringByDeletingPathExtension] ofType:[fileName pathExtension]];
@@ -39,6 +54,26 @@
   NSData *data = [jsonAsString dataUsingEncoding:NSASCIIStringEncoding];
   id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
   [self.glView loadParticleSystem:json];
+  [self refreshButtons];
+}
+
+- (IBAction)historyButtonTouched:(id)sender
+{
+  MXHistoryPickerViewController *controller = [[MXHistoryPickerViewController alloc] initWithNibName:nil bundle:nil scene:self.glView.scene];
+  NSPopover *popover = [[NSPopover alloc] init];
+  [popover setContentSize:NSMakeSize(100.0f, 100.0f)];
+  [popover setContentViewController:controller];
+  [popover setAnimates:YES];
+  [popover setBehavior:NSPopoverBehaviorTransient];
+  [popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxXEdge];
+}
+
+- (IBAction)saveButtonTouched:(id)sender
+{
+}
+
+- (IBAction)loadButtonTouched:(id)sender
+{
 }
 
 @end

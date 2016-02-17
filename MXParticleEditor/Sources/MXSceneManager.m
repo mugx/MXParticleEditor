@@ -8,7 +8,6 @@
 
 #import "MXSceneManager.h"
 #import "MXGameEngine.h"
-#import "MXMacros.h"
 
 @interface MXSceneManager()
 @property(nonatomic, strong, readwrite) MXCamera *camera;

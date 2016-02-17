@@ -8,7 +8,6 @@
 
 #import "MXParticleOpenGLView.h"
 #import "MXGameEngine.h"
-#import "MXSceneManager.h"
 #import "MXEntity.h"
 
 typedef NS_ENUM(NSUInteger, SceneStatus) {
@@ -23,7 +22,7 @@ typedef NS_ENUM(NSUInteger, SceneStatus) {
 
 @interface MXParticleOpenGLView()
 @property(nonatomic, strong) NSTimer *timer;
-@property(nonatomic, strong) MXSceneManager *scene;
+@property(nonatomic, strong, readwrite) MXSceneManager *scene;
 @property(nonatomic, strong) NSTimer *renderTimer;
 @property(nonatomic, strong) MXEntity *mainEntity;
 @property(nonatomic, assign) SceneStatus status;
@@ -81,7 +80,15 @@ typedef NS_ENUM(NSUInteger, SceneStatus) {
 
 - (void)loadParticleSystem:(id)particleSystem
 {
-  if (!particleSystem)
+  self.currentParticleSystem = particleSystem;
+  self.currentParticleSystemKey = particleSystem[@"particleSystem"];
+  [self.scene.particleManager loadParticleSystem:particleSystem];
+  [self refreshButtons];
+}
+
+- (void)refreshButtons
+{
+  if (!self.currentParticleSystem)
   {
     self.loopButton.enabled = NO;
     self.playButton.enabled = NO;
@@ -102,10 +109,6 @@ typedef NS_ENUM(NSUInteger, SceneStatus) {
     self.speedIncrButton.enabled = YES;
     self.speedDecrButton.enabled = YES;
   }
-  
-  self.currentParticleSystem = particleSystem;
-  self.currentParticleSystemKey = particleSystem[@"particleSystem"];
-  [self.scene.particleManager loadParticleSystem:particleSystem];
 }
 
 #pragma mark -Update & Draw

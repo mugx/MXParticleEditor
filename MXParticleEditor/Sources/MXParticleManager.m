@@ -10,12 +10,10 @@
 #import "MXParticle.h"
 
 #define MAX_PARTICLES 200
-#define kExplosionSystem @"explosionSystem"
-#define kAfterburnSystem @"afterburnSystem"
 
 @interface MXParticleManager()
 @property(nonatomic,strong) NSMutableArray *particles;
-@property(nonatomic,strong) NSMutableDictionary *particleSystemsDictionary;
+@property(nonatomic,strong,readwrite) NSMutableDictionary *particleSystemsDictionary;
 @property(nonatomic,weak) MXParticle *particleAvailable;
 @property(nonatomic,weak) MXSceneManager *sceneManager;
 @end
@@ -55,7 +53,10 @@
 #pragma mark - Making Particle Effects
 - (void)loadParticleSystem:(id)particleSystem
 {
-  [self.particleSystemsDictionary setObject:particleSystem forKey:particleSystem[@"particleSystem"]];
+  if (particleSystem)
+  {
+    [self.particleSystemsDictionary setObject:particleSystem forKey:particleSystem[@"particleSystem"]];
+  }
 }
 
 - (void)make:(NSString *)particleSystemKey parentEntity:(MXEntity *)parentEntity loop:(BOOL)loop

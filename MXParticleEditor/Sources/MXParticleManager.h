@@ -18,5 +18,6 @@
 - (void)make:(NSString *)particleSystemKey parentEntity:(MXEntity *)parentEntity loop:(BOOL)loop;
 - (void)update:(NSTimeInterval)timeSinceLastUpdate;
 - (void)draw;
+@property(readonly) NSMutableDictionary *particleSystemsDictionary;
 @end
    
