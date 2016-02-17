@@ -49,6 +49,7 @@
 		1DDAECA01C74410C00229DDD /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DDAEC9F1C74410C00229DDD /* history.png */; };
 		1DDAECAB1C74450F00229DDD /* MXHistoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDAECA91C74450F00229DDD /* MXHistoryPickerViewController.m */; };
 		1DDAECAC1C74450F00229DDD /* MXHistoryPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDAECAA1C74450F00229DDD /* MXHistoryPickerViewController.xib */; };
+		1DDAECAE1C7454F600229DDD /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DDAECAD1C7454F600229DDD /* camera.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,7 @@
 		1DDAECA81C74450F00229DDD /* MXHistoryPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXHistoryPickerViewController.h; path = Sources/MXHistoryPickerViewController.h; sourceTree = "<group>"; };
 		1DDAECA91C74450F00229DDD /* MXHistoryPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXHistoryPickerViewController.m; path = Sources/MXHistoryPickerViewController.m; sourceTree = "<group>"; };
 		1DDAECAA1C74450F00229DDD /* MXHistoryPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MXHistoryPickerViewController.xib; path = Sources/MXHistoryPickerViewController.xib; sourceTree = "<group>"; };
+		1DDAECAD1C7454F600229DDD /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = Resources/camera.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				1D72CA731C72E98E00ABDC31 /* add.png */,
 				1D72CA751C72EA4500ABDC31 /* trashCan.png */,
 				1DDAEC9F1C74410C00229DDD /* history.png */,
+				1DDAECAD1C7454F600229DDD /* camera.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				1D9593141C6F3BAD00E40236 /* loopButton.png in Resources */,
 				1DA3F95E1C72F8670054EEC9 /* explosionConfig.json in Resources */,
 				1D3192B31C6E404800188614 /* Shader.fsh in Resources */,
+				1DDAECAE1C7454F600229DDD /* camera.png in Resources */,
 				1D3192B61C6E404800188614 /* stopButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

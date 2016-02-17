@@ -76,4 +76,8 @@
 {
 }
 
+- (IBAction)cameraButtonTouched:(id)sender
+{
+}
+
 @end
