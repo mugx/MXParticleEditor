@@ -36,8 +36,8 @@
   return  self.scene.particleManager.particleSystemsDictionary.allKeys[row];
 }
 
-- (void)tableViewSelectionDidChange:(NSNotification *)notification {
-  
+- (void)tableViewSelectionDidChange:(NSNotification *)notification
+{
   NSTableView *tableView = notification.object;
   NSLog(@"User has selected row %ld", (long)tableView.selectedRow);
 }

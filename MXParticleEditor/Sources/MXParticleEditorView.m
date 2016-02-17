@@ -61,7 +61,7 @@
 {
   MXHistoryPickerViewController *controller = [[MXHistoryPickerViewController alloc] initWithNibName:nil bundle:nil scene:self.glView.scene];
   NSPopover *popover = [[NSPopover alloc] init];
-  [popover setContentSize:NSMakeSize(100.0f, 100.0f)];
+  [popover setContentSize:NSMakeSize(200.0f, 200.0f)];
   [popover setContentViewController:controller];
   [popover setAnimates:YES];
   [popover setBehavior:NSPopoverBehaviorTransient];
