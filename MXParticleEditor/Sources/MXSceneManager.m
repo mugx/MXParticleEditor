@@ -16,20 +16,10 @@
 
 @implementation MXSceneManager
 
-+ (instancetype)sharedInstance
-{
-  static dispatch_once_t predicate;
-  static MXSceneManager *instance = 0;
-  dispatch_once(&predicate, ^{
-    instance = [[MXSceneManager alloc] init];
-  });
-  return instance;
-}
-
 #pragma mark - LoadScene
 - (void)loadScene
 {
-  [[MXGameEngine sharedInstance] load];  
+  [[MXGameEngine sharedInstance] load];
   NSDictionary *gameJson = [MXUtils jsonFromFile:@"globalConfig.json"];
   self.camera = [[MXCamera alloc] init:gameJson withScene:self];
   self.particleManager = [[MXParticleManager alloc] initWithScene:self];
@@ -37,10 +27,10 @@
 
 - (void)unloadScene
 {
-  [[MXGameEngine sharedInstance] unload];
-  
+  NSLog(@"MXSceneManager::unloadScene");
   _camera = nil;
   _particleManager = nil;
+  [[MXGameEngine sharedInstance] unload];
 }
 
 #pragma mark - Update & Draw
