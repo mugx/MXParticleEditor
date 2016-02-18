@@ -47,6 +47,7 @@
 {
   [self.particles removeAllObjects];
   _particles = nil;
+  [self.particleSystemsDictionary removeAllObjects];
   _particleSystemsDictionary = nil;
 }
 
