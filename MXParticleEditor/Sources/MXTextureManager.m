@@ -15,11 +15,6 @@
 
 @implementation MXTextureManager
 
-- (void)dealloc
-{
-  [self unload];
-}
-
 - (void)load
 {
   self.textureDictionary = [[NSMutableDictionary alloc] init];
@@ -27,6 +22,7 @@
 
 - (void)unload
 {
+  NSLog(@"MXTextureManager::unload");
   for (GLKTextureInfo *textureInfo in [self.textureDictionary allValues])
   {
     GLuint name = textureInfo.name;
@@ -44,6 +40,8 @@
     GLKTextureInfo *textureInfo = self.textureDictionary[fileName];
     return textureInfo.name;
   }
+  //--- HACK: Clear GL error code before calling GLKTextureLoader, otherwise GLKTextureLoader will use the previous GL error... ---//
+  glGetError();
   
   NSError *error;
   NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -63,7 +61,7 @@
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-  
+
   if (!error)
   {
     [self.textureDictionary setObject:textureInfo forKey:fileName];
@@ -90,7 +88,9 @@
     GLKTextureInfo *textureInfo = self.textureDictionary[skyboxId];
     return textureInfo.name;
   }
-  
+  //--- HACK: Clear GL error code before calling GLKTextureLoader, otherwise GLKTextureLoader will use the previous GL error... ---//
+  glGetError();
+
   NSError *error;
   NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
                            [NSNumber numberWithBool:YES],
