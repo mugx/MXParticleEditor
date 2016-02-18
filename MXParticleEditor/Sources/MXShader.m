@@ -62,8 +62,13 @@
     glDetachShader(shader.program, fragmentShaderId);
     glDeleteShader(fragmentShaderId);
   }
+  
+  int error = glGetError();
+  if (error)
+  {
+    NSLog(@"MXShader::glError: %d", error);
+  }
 
-//  return status ? shader : nil;
   return shader;
 }
 

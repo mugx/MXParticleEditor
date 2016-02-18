@@ -14,11 +14,6 @@
 
 @implementation MXShaderManager
 
-- (void)dealloc
-{
-  [self unload];
-}
-
 #pragma mark - Manager setup
 
 - (void)load
@@ -45,6 +40,7 @@
 
 - (void)unload
 {
+  NSLog(@"MXShaderManager::unload");
   if (!self.shadersDictionary)
   {
     return;
