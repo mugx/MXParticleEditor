@@ -26,17 +26,6 @@
   return instance;
 }
 
-- (instancetype)init
-{
-  self = [super init];
-  return self;
-}
-
-- (void)dealloc
-{
-  [self unload];
-}
-
 - (void)load
 {
   self.shaderManager = [[MXShaderManager alloc] init];
