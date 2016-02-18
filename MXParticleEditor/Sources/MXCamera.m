@@ -26,10 +26,6 @@
   return self;
 }
 
-- (void)dealloc
-{
-}
-
 - (FrustumCollision)sphereInFrustum:(GLKVector3)position radius:(float)radius
 {
   for (int face = 0; face < 6; ++face)
@@ -55,7 +51,6 @@
 - (GLKMatrix4)getProjectionMatrix
 {
   CGRect bounds = [[[NSApplication sharedApplication] mainWindow] frame];
-//  bounds = CGRectMake(0, 0, 600, 600);
   float aspect = fabsf((float)bounds.size.width / (float)bounds.size.height);
   GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(50.0f) * self.zoomFactor, aspect, 0.1f, 3000.0f);
   return projectionMatrix;
