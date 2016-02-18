@@ -14,11 +14,6 @@
 
 @implementation MXMeshManager
 
-- (void)dealloc
-{
-  [self unload];
-}
-
 #pragma mark - Manager setup
 
 - (void)load
@@ -28,6 +23,7 @@
 
 - (void)unload
 {
+  NSLog(@"MXMeshManager::unload");
   [self.meshDictionary removeAllObjects];
   self.meshDictionary = nil;
 }
