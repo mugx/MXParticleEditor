@@ -19,4 +19,3 @@ void main()
 {
   gl_FragColor = (colorMaterialVertex + colorLightVertex) * texture2D(Texture, textureCoordinatesVertex) * alphaVertex;
 }
-

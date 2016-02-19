@@ -12,6 +12,7 @@
 #import "MXMeshManager.h"
 #import "MXMathUtils.h"
 #import "MXUtils.h"
+#import "MXGL.h"
 
 @interface MXGameEngine : NSObject
 + (instancetype)sharedInstance;

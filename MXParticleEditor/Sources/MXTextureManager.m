@@ -7,6 +7,7 @@
 //
 
 #import "MXTextureManager.h"
+#import "MXGL.h"
 #import <GLKit/GLKit.h>
 
 @interface MXTextureManager()
@@ -41,7 +42,7 @@
     return textureInfo.name;
   }
   //--- HACK: Clear GL error code before calling GLKTextureLoader, otherwise GLKTextureLoader will use the previous GL error... ---//
-  glGetError();
+  MXGLError();
   
   NSError *error;
   NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -89,7 +90,7 @@
     return textureInfo.name;
   }
   //--- HACK: Clear GL error code before calling GLKTextureLoader, otherwise GLKTextureLoader will use the previous GL error... ---//
-  glGetError();
+  MXGLError();
 
   NSError *error;
   NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:

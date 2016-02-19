@@ -40,7 +40,7 @@ typedef NS_ENUM(NSUInteger, SceneStatus) {
 
 @implementation MXParticleOpenGLView
 
-- (void)startupGL
+- (void)awakeFromNib
 {
   self.hidden = NO;
   [[self openGLContext] makeCurrentContext];
@@ -126,8 +126,6 @@ typedef NS_ENUM(NSUInteger, SceneStatus) {
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-  [super drawRect:dirtyRect];
-  
   //--- Color & Depth buffer clearing ---//
   glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -135,8 +133,12 @@ typedef NS_ENUM(NSUInteger, SceneStatus) {
   //---- Viewport setting ----//
   glViewport(0, 0, self.bounds.size.width, self.bounds.size.height);
   
+  //--- draw scene ---//
   [self.scene draw];
+  
+  //---- Flush Buffer ----//
   [[self openGLContext] flushBuffer];
+  MXGLError();
 }
 
 #pragma mark - IBActions

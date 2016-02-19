@@ -117,7 +117,8 @@
   [shader setUniform:@"diffuseMaterial" floatVector3:self.diffuseMaterial.v];
   [shader setUniform:@"shininessMaterial" floatValue:self.shininessMaterial];
   [shader setUniform:@"alpha" floatValue:self.alpha];
-  
+
+  // draw
   [self.mesh draw:shader];
 }
 

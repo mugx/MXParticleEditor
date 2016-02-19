@@ -99,6 +99,7 @@
 		1D3192A91C6E404800188614 /* stopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stopButton.png; path = Resources/stopButton.png; sourceTree = "<group>"; };
 		1D3192B91C6E446B00188614 /* MXParticleEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXParticleEditorView.h; path = Sources/MXParticleEditorView.h; sourceTree = "<group>"; };
 		1D3192BA1C6E446B00188614 /* MXParticleEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXParticleEditorView.m; path = Sources/MXParticleEditorView.m; sourceTree = "<group>"; };
+		1D682E8C1C76D81600459810 /* MXGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXGL.h; path = Sources/MXGL.h; sourceTree = "<group>"; };
 		1D72CA711C72E92200ABDC31 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = save.png; path = Resources/save.png; sourceTree = "<group>"; };
 		1D72CA731C72E98E00ABDC31 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add.png; path = Resources/add.png; sourceTree = "<group>"; };
 		1D72CA751C72EA4500ABDC31 /* trashCan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trashCan.png; path = Resources/trashCan.png; sourceTree = "<group>"; };
@@ -133,8 +134,8 @@
 		1D3192B71C6E405300188614 /* shader */ = {
 			isa = PBXGroup;
 			children = (
-				1D3192A61C6E404800188614 /* Shader.fsh */,
 				1D3192A71C6E404800188614 /* Shader.vsh */,
+				1D3192A61C6E404800188614 /* Shader.fsh */,
 			);
 			name = shader;
 			sourceTree = "<group>";
@@ -174,10 +175,10 @@
 		1D72A8B91C6C0DAE00807CC0 /* Shader */ = {
 			isa = PBXGroup;
 			children = (
-				1D3192841C6E3F8600188614 /* MXShader.h */,
-				1D3192851C6E3F8600188614 /* MXShader.m */,
 				1D3192861C6E3F8600188614 /* MXShaderManager.h */,
 				1D3192871C6E3F8600188614 /* MXShaderManager.m */,
+				1D3192841C6E3F8600188614 /* MXShader.h */,
+				1D3192851C6E3F8600188614 /* MXShader.m */,
 			);
 			name = Shader;
 			sourceTree = "<group>";
@@ -194,10 +195,10 @@
 		1D72A8BB1C6C0DC200807CC0 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				1D3192711C6E3F8600188614 /* MXEntity.h */,
-				1D3192721C6E3F8600188614 /* MXEntity.m */,
 				1D3192821C6E3F8600188614 /* MXSceneManager.h */,
 				1D3192831C6E3F8600188614 /* MXSceneManager.m */,
+				1D3192711C6E3F8600188614 /* MXEntity.h */,
+				1D3192721C6E3F8600188614 /* MXEntity.m */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -214,10 +215,10 @@
 		1D72A8BD1C6C0DCF00807CC0 /* Mesh */ = {
 			isa = PBXGroup;
 			children = (
-				1D3192781C6E3F8600188614 /* MXMesh.h */,
-				1D3192791C6E3F8600188614 /* MXMesh.m */,
 				1D31927A1C6E3F8600188614 /* MXMeshManager.h */,
 				1D31927B1C6E3F8600188614 /* MXMeshManager.m */,
+				1D3192781C6E3F8600188614 /* MXMesh.h */,
+				1D3192791C6E3F8600188614 /* MXMesh.m */,
 			);
 			name = Mesh;
 			sourceTree = "<group>";
@@ -303,6 +304,7 @@
 		1D88E7B21C6C099000C4EA86 /* MXEngine */ = {
 			isa = PBXGroup;
 			children = (
+				1D682E8C1C76D81600459810 /* MXGL.h */,
 				1D3192731C6E3F8600188614 /* MXGameEngine.h */,
 				1D3192741C6E3F8600188614 /* MXGameEngine.m */,
 				1D72A8BB1C6C0DC200807CC0 /* Scene */,

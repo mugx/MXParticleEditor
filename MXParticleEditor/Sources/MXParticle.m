@@ -37,7 +37,7 @@
   self.colorMaterial = [MXMathUtils GLKVectorRGBMake:dictionary[@"color"]];
   self.mesh = [[MXGameEngine sharedInstance].meshManager loadMesh:dictionary[@"model"]];
   self.centerOfCoordinateSystemOffset = [MXMathUtils GLKVector3Make:dictionary[@"centerOfCoordinateSystemOffset"]];
-
+  
   self.fade = RAND([dictionary[@"fade"][@"min"] floatValue],
                    [dictionary[@"fade"][@"max"] floatValue]);
   

@@ -10,7 +10,6 @@
 #import "MXSceneManager.h"
 
 @interface MXParticleOpenGLView : NSOpenGLView
-- (void)startupGL;
 - (void)loadParticleSystem:(id)particleSystem;
 @property(readonly) MXSceneManager *scene;
 @property(nonatomic,strong) NSString *currentParticleSystemKey;

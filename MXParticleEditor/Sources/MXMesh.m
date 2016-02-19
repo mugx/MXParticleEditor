@@ -7,9 +7,7 @@
 //
 
 #import "MXMesh.h"
-#import "MXShaderManager.h"
 #import "MXGameEngine.h"
-#import <OpenGL/OpenGL.h>
 
 @interface MXMesh()
 @property(nonatomic,assign) GLuint vertexArray;
@@ -31,7 +29,7 @@
   free(normal);
   free(mapcoord);
   free(polygon);
-    
+
   glDeleteVertexArrays(1, &_vertexArray);
   glDeleteBuffers(1, &_vertexBuffer);
   glDeleteBuffers(1, &_indexBuffer);

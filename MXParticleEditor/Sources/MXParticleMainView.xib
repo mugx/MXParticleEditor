@@ -142,7 +142,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="715" height="748"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <openGLView hidden="YES" colorSize="5bit_RGB_8bit_Alpha" depthSize="24bit" samplingRate="4" numberOfAuxiliaryBuffers="1" useAuxiliaryDepthBufferStencil="NO" useDoubleBufferingEnabled="YES" allowOffline="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4R-qY-ufr" customClass="MXParticleOpenGLView">
+                                    <openGLView hidden="YES" colorSize="8bit_RGB" depthSize="24bit" samplingRate="4" numberOfAuxiliaryBuffers="1" useAuxiliaryDepthBufferStencil="NO" useDoubleBufferingEnabled="YES" allowOffline="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4R-qY-ufr" customClass="MXParticleOpenGLView">
                                         <rect key="frame" x="0.0" y="0.0" width="715" height="748"/>
                                         <connections>
                                             <outlet property="loopButton" destination="tpj-7Z-fkm" id="5hc-Ej-Op0"/>
@@ -245,7 +245,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="M8V-GV-zXu"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="inline" title="x1" bezelStyle="inline" image="D140B48C-8306-4572-848E-17721A2915EE" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="BrL-Kf-Ccg">
+                                                <buttonCell key="cell" type="inline" title="x1" bezelStyle="inline" image="1C87A1AF-FF4D-44F0-9268-3B8F92B6A3E5" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="BrL-Kf-Ccg">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="smallSystemBold"/>
                                                 </buttonCell>
@@ -427,7 +427,7 @@
         </window>
     </objects>
     <resources>
-        <image name="D140B48C-8306-4572-848E-17721A2915EE" width="1" height="1">
+        <image name="1C87A1AF-FF4D-44F0-9268-3B8F92B6A3E5" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

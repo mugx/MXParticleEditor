@@ -24,7 +24,6 @@ int main(int argc, const char * argv[]) {  return NSApplicationMain(argc, argv);
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 //  self.window.isZoomed = YES;
-  [self.openGLView startupGL];
   self.editorView.glView = self.openGLView;
 }
 

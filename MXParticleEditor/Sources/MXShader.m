@@ -7,6 +7,7 @@
 //
 
 #import "MXShader.h"
+#import "MXGL.h"
 
 @interface MXShader()
 @property(nonatomic,assign) GLuint program;
@@ -62,13 +63,7 @@
     glDetachShader(shader.program, fragmentShaderId);
     glDeleteShader(fragmentShaderId);
   }
-  
-  int error = glGetError();
-  if (error)
-  {
-    NSLog(@"MXShader::glError: %d", error);
-  }
-
+  MXGLError();
   return shader;
 }
 

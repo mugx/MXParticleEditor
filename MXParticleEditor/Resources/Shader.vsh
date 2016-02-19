@@ -36,7 +36,7 @@ void main(void)
   float df = max(0.0, dot(N, L));
   float sf = max(0.0, dot(N, H));
   sf = pow(sf, shininessMaterial);
-
+  
   colorLightVertex = vec4(ambientMaterial + sf * specularMaterial + df * diffuseMaterial, 1.0);
   colorMaterialVertex = vec4(colorMaterial, 1.0);
   alphaVertex = alpha;
