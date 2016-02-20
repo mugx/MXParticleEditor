@@ -9,13 +9,19 @@
 #import "MXParticleEditorView.h"
 #import "MXHistoryPickerViewController.h"
 #import "MXUtils.h"
+#import "MXMathUtils.h"
 
 @interface MXParticleEditorView()
 @property IBOutlet NSTextView *textView;
 @property IBOutlet NSButton *historyButton;
 @property IBOutlet NSButton *saveButton;
 @property IBOutlet NSButton *loadButton;
-@property(nonatomic,strong) NSString *json;
+
+//@property IBOutlet NSButton *loadButton;
+@property IBOutlet NSButton *textureButton;
+@property IBOutlet NSColorWell *colorButton;
+
+@property(nonatomic,weak) id json;
 @end
 
 @implementation MXParticleEditorView
@@ -23,6 +29,7 @@
 - (void)awakeFromNib
 {
   [self refreshButtons];
+  self.textView.delegate = self;
 }
 
 - (BOOL)textView:(NSTextView *)textView shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(nullable NSString *)replacementString
@@ -30,6 +37,7 @@
   //--- check if is a json ---//
   //  NSData *data = [textView.string dataUsingEncoding:NSASCIIStringEncoding];
   //  id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+  //  [self.glView.scene.particleManager loadParticleSystem:result];
   return YES;
 }
 
@@ -37,9 +45,15 @@
 
 - (void)refreshButtons
 {
+  //--- refreshing top bar buttons ---//
   self.historyButton.enabled = self.glView.scene.particleManager.particleSystemsDictionary.count > 0;
   self.saveButton.enabled = NO;
   self.loadButton.enabled = YES;
+  
+  //--- refreshing particle system controls ---//
+  [self.textureButton setImage:[NSImage imageNamed:self.json[@"texture"]]];
+  GLKVector3 color = GLKVectorRGBMake(self.json[@"color"]);
+  [self.colorButton setColor:[NSColor colorWithRed:color.r green:color.g blue:color.b alpha:1.0]];
 }
 
 #pragma mark - Actions
@@ -52,8 +66,8 @@
   self.textView.string = jsonAsString;
   
   NSData *data = [jsonAsString dataUsingEncoding:NSASCIIStringEncoding];
-  id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-  [self.glView loadParticleSystem:json];
+  self.json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+  [self.glView loadParticleSystem:self.json];
   [self refreshButtons];
 }
 
@@ -79,5 +93,8 @@
 - (IBAction)cameraButtonTouched:(id)sender
 {
 }
+
+#pragma mark - Particle System Controls
+
 
 @end

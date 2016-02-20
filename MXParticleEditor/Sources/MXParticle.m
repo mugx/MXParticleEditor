@@ -34,7 +34,7 @@
   
   self.textureID = [[MXGameEngine sharedInstance].textureManager loadTexture:dictionary[@"texture"]];
   self.scale = [MXMathUtils GLKVector3Make:dictionary[@"scale"]];
-  self.colorMaterial = [MXMathUtils GLKVectorRGBMake:dictionary[@"color"]];
+  self.colorMaterial = GLKVectorRGBMake(dictionary[@"color"]);
   self.mesh = [[MXGameEngine sharedInstance].meshManager loadMesh:dictionary[@"model"]];
   self.centerOfCoordinateSystemOffset = [MXMathUtils GLKVector3Make:dictionary[@"centerOfCoordinateSystemOffset"]];
   

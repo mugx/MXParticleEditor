@@ -10,8 +10,8 @@
 #import <GLKit/GLKit.h>
 
 #define RAND(smallNumber, bigNumber) ((((float) (arc4random() % ((unsigned)RAND_MAX + 1)) / RAND_MAX) * (bigNumber - smallNumber)) + smallNumber)
+#define GLKVectorRGBMake(dictionary) GLKVector3Make([dictionary[@"r"] floatValue], [dictionary[@"g"] floatValue], [dictionary[@"b"] floatValue])
 
 @interface MXMathUtils : NSObject
 + (GLKVector3)GLKVector3Make:(NSDictionary *)dictionary;
-+ (GLKVector3)GLKVectorRGBMake:(NSDictionary *)dictionary;
 @end

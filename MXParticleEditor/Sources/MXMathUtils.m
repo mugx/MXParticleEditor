@@ -15,9 +15,4 @@
   return GLKVector3Make([dictionary[@"x"] floatValue], [dictionary[@"y"] floatValue], [dictionary[@"z"] floatValue]);
 }
 
-+ (GLKVector3)GLKVectorRGBMake:(NSDictionary *)dictionary
-{
-  return GLKVector3Make([dictionary[@"r"] floatValue], [dictionary[@"g"] floatValue], [dictionary[@"b"] floatValue]);
-}
-
 @end
