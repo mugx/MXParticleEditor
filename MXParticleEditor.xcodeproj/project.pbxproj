@@ -13,7 +13,6 @@
 		1D31928D1C6E3F8600188614 /* MXCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3192701C6E3F8600188614 /* MXCamera.m */; };
 		1D31928E1C6E3F8600188614 /* MXEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3192721C6E3F8600188614 /* MXEntity.m */; };
 		1D31928F1C6E3F8600188614 /* MXGameEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3192741C6E3F8600188614 /* MXGameEngine.m */; };
-		1D3192901C6E3F8600188614 /* MXMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3192771C6E3F8600188614 /* MXMathUtils.m */; };
 		1D3192911C6E3F8600188614 /* MXMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3192791C6E3F8600188614 /* MXMesh.m */; };
 		1D3192921C6E3F8600188614 /* MXMeshManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D31927B1C6E3F8600188614 /* MXMeshManager.m */; };
 		1D3192931C6E3F8600188614 /* MXParticleOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D31927D1C6E3F8600188614 /* MXParticleOpenGLView.m */; };
@@ -36,6 +35,7 @@
 		1D3192B51C6E404800188614 /* sphere.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 1D3192A81C6E404800188614 /* sphere.3ds */; };
 		1D3192B61C6E404800188614 /* stopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D3192A91C6E404800188614 /* stopButton.png */; };
 		1D3192BB1C6E446B00188614 /* MXParticleEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3192BA1C6E446B00188614 /* MXParticleEditorView.m */; };
+		1D44D33E1C78544100D12081 /* NSDictionary+json.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D33D1C78544100D12081 /* NSDictionary+json.m */; };
 		1D72CA721C72E92200ABDC31 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D72CA711C72E92200ABDC31 /* save.png */; };
 		1D72CA741C72E98E00ABDC31 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D72CA731C72E98E00ABDC31 /* add.png */; };
 		1D72CA761C72EA4500ABDC31 /* trashCan.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D72CA751C72EA4500ABDC31 /* trashCan.png */; };
@@ -63,8 +63,6 @@
 		1D3192721C6E3F8600188614 /* MXEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXEntity.m; path = Sources/MXEntity.m; sourceTree = "<group>"; };
 		1D3192731C6E3F8600188614 /* MXGameEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXGameEngine.h; path = Sources/MXGameEngine.h; sourceTree = "<group>"; };
 		1D3192741C6E3F8600188614 /* MXGameEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXGameEngine.m; path = Sources/MXGameEngine.m; sourceTree = "<group>"; };
-		1D3192761C6E3F8600188614 /* MXMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXMathUtils.h; path = Sources/MXMathUtils.h; sourceTree = "<group>"; };
-		1D3192771C6E3F8600188614 /* MXMathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXMathUtils.m; path = Sources/MXMathUtils.m; sourceTree = "<group>"; };
 		1D3192781C6E3F8600188614 /* MXMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXMesh.h; path = Sources/MXMesh.h; sourceTree = "<group>"; };
 		1D3192791C6E3F8600188614 /* MXMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXMesh.m; path = Sources/MXMesh.m; sourceTree = "<group>"; };
 		1D31927A1C6E3F8600188614 /* MXMeshManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXMeshManager.h; path = Sources/MXMeshManager.h; sourceTree = "<group>"; };
@@ -99,6 +97,8 @@
 		1D3192A91C6E404800188614 /* stopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stopButton.png; path = Resources/stopButton.png; sourceTree = "<group>"; };
 		1D3192B91C6E446B00188614 /* MXParticleEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXParticleEditorView.h; path = Sources/MXParticleEditorView.h; sourceTree = "<group>"; };
 		1D3192BA1C6E446B00188614 /* MXParticleEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXParticleEditorView.m; path = Sources/MXParticleEditorView.m; sourceTree = "<group>"; };
+		1D44D33C1C78544100D12081 /* NSDictionary+json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+json.h"; path = "Sources/NSDictionary+json.h"; sourceTree = "<group>"; };
+		1D44D33D1C78544100D12081 /* NSDictionary+json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+json.m"; path = "Sources/NSDictionary+json.m"; sourceTree = "<group>"; };
 		1D682E8C1C76D81600459810 /* MXGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXGL.h; path = Sources/MXGL.h; sourceTree = "<group>"; };
 		1D72CA711C72E92200ABDC31 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = save.png; path = Resources/save.png; sourceTree = "<group>"; };
 		1D72CA731C72E98E00ABDC31 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add.png; path = Resources/add.png; sourceTree = "<group>"; };
@@ -161,11 +161,18 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		1D44D33B1C78541400D12081 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				1D44D33C1C78544100D12081 /* NSDictionary+json.h */,
+				1D44D33D1C78544100D12081 /* NSDictionary+json.m */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
 		1D72A8B81C6C0DA700807CC0 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				1D3192761C6E3F8600188614 /* MXMathUtils.h */,
-				1D3192771C6E3F8600188614 /* MXMathUtils.m */,
 				1D31928A1C6E3F8600188614 /* MXUtils.h */,
 				1D31928B1C6E3F8600188614 /* MXUtils.m */,
 			);
@@ -321,6 +328,7 @@
 		1DDAECA11C74426100229DDD /* MXEditor */ = {
 			isa = PBXGroup;
 			children = (
+				1D44D33B1C78541400D12081 /* util */,
 				1DDAECA21C7444A100229DDD /* history */,
 			);
 			name = MXEditor;
@@ -429,7 +437,6 @@
 			files = (
 				1D3192951C6E3F8600188614 /* MXParticleManager.m in Sources */,
 				1D3192941C6E3F8600188614 /* MXParticle.m in Sources */,
-				1D3192901C6E3F8600188614 /* MXMathUtils.m in Sources */,
 				1D3192971C6E3F8600188614 /* MXShader.m in Sources */,
 				1D31929A1C6E3F8600188614 /* MXUtils.m in Sources */,
 				1D3192961C6E3F8600188614 /* MXSceneManager.m in Sources */,
@@ -437,6 +444,7 @@
 				1D3192991C6E3F8600188614 /* MXTextureManager.m in Sources */,
 				1D3192981C6E3F8600188614 /* MXShaderManager.m in Sources */,
 				1D3192911C6E3F8600188614 /* MXMesh.m in Sources */,
+				1D44D33E1C78544100D12081 /* NSDictionary+json.m in Sources */,
 				1DDAECAB1C74450F00229DDD /* MXHistoryPickerViewController.m in Sources */,
 				1D31928C1C6E3F8600188614 /* AppDelegate.m in Sources */,
 				1D3192931C6E3F8600188614 /* MXParticleOpenGLView.m in Sources */,

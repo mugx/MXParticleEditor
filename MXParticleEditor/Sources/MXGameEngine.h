@@ -10,7 +10,6 @@
 #import "MXShaderManager.h"
 #import "MXTextureManager.h"
 #import "MXMeshManager.h"
-#import "MXMathUtils.h"
 #import "MXUtils.h"
 #import "MXGL.h"
 
