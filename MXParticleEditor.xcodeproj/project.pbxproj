@@ -46,6 +46,7 @@
 		1D9593141C6F3BAD00E40236 /* loopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9593131C6F3BAD00E40236 /* loopButton.png */; };
 		1DA3F95C1C72F8620054EEC9 /* particleSystemConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DA3F95B1C72F8620054EEC9 /* particleSystemConfig.json */; };
 		1DA3F95E1C72F8670054EEC9 /* explosionConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DA3F95D1C72F8670054EEC9 /* explosionConfig.json */; };
+		1DB6E7161C790C2D0083C103 /* particleSystemTemplate.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DB6E7151C790C2D0083C103 /* particleSystemTemplate.json */; };
 		1DDAECA01C74410C00229DDD /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DDAEC9F1C74410C00229DDD /* history.png */; };
 		1DDAECAB1C74450F00229DDD /* MXHistoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDAECA91C74450F00229DDD /* MXHistoryPickerViewController.m */; };
 		1DDAECAC1C74450F00229DDD /* MXHistoryPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDAECAA1C74450F00229DDD /* MXHistoryPickerViewController.xib */; };
@@ -111,6 +112,7 @@
 		1D9593131C6F3BAD00E40236 /* loopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loopButton.png; path = Resources/loopButton.png; sourceTree = "<group>"; };
 		1DA3F95B1C72F8620054EEC9 /* particleSystemConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = particleSystemConfig.json; path = Resources/particleSystemConfig.json; sourceTree = "<group>"; };
 		1DA3F95D1C72F8670054EEC9 /* explosionConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = explosionConfig.json; path = Resources/explosionConfig.json; sourceTree = "<group>"; };
+		1DB6E7151C790C2D0083C103 /* particleSystemTemplate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = particleSystemTemplate.json; path = Resources/particleSystemTemplate.json; sourceTree = "<group>"; };
 		1DDAEC9F1C74410C00229DDD /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = history.png; path = Resources/history.png; sourceTree = "<group>"; };
 		1DDAECA81C74450F00229DDD /* MXHistoryPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXHistoryPickerViewController.h; path = Sources/MXHistoryPickerViewController.h; sourceTree = "<group>"; };
 		1DDAECA91C74450F00229DDD /* MXHistoryPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXHistoryPickerViewController.m; path = Sources/MXHistoryPickerViewController.m; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				1D3192B71C6E405300188614 /* shader */,
 				1D3192B81C6E406500188614 /* images */,
 				1D9593111C6F0C3000E40236 /* globalConfig.json */,
+				1DB6E7151C790C2D0083C103 /* particleSystemTemplate.json */,
 				1DA3F95B1C72F8620054EEC9 /* particleSystemConfig.json */,
 				1DA3F95D1C72F8670054EEC9 /* explosionConfig.json */,
 				1D3192A81C6E404800188614 /* sphere.3ds */,
@@ -403,6 +406,7 @@
 			files = (
 				1D291FFC1C719CA600E64DBB /* decrSpeed.png in Resources */,
 				1D3192B21C6E404800188614 /* playButton.png in Resources */,
+				1DB6E7161C790C2D0083C103 /* particleSystemTemplate.json in Resources */,
 				1D72CA761C72EA4500ABDC31 /* trashCan.png in Resources */,
 				1D3192AA1C6E404800188614 /* Assets.xcassets in Resources */,
 				1D3192B41C6E404800188614 /* Shader.vsh in Resources */,

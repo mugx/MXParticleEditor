@@ -9,6 +9,6 @@
 #import <Cocoa/Cocoa.h>
 #import "MXParticleOpenGLView.h"
 
-@interface MXParticleEditorView : NSView <NSTextViewDelegate>
+@interface MXParticleEditorView : NSView <NSTextViewDelegate, NSTextFieldDelegate>
 @property(nonatomic,weak) MXParticleOpenGLView *glView;
 @end

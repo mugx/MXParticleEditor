@@ -1,0 +1,12 @@
+{
+  "particleSystem":"",
+  "count":"0",
+  "texture":"",
+  "model":"",
+  "centerOfCoordinateSystemOffset":{"x":"0","y":"0","z":"0"},
+  "color":{"r":"0.0","g":"0.0","b":"0.0"},
+  "fade":{"min":"0.0","max":"0.0"},
+  "scale":{"min":"0.0","max":"0.0"},
+  "velocity":{"min_x":"0.0","max_x":"0.0", "min_y":"0.0", "max_y":"0.0"},
+  "acceleration":{"x":"0.0", "y":"0.0", "z":"0.0"}
+}

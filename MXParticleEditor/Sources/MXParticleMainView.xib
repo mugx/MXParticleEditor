@@ -245,7 +245,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="M8V-GV-zXu"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="inline" title="x1" bezelStyle="inline" image="491F65B8-74A9-4297-9867-F7D88D8996B8" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="BrL-Kf-Ccg">
+                                                <buttonCell key="cell" type="inline" title="x1" bezelStyle="inline" image="CAA8CA5F-8E90-4E71-B2BB-00D56598F684" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="BrL-Kf-Ccg">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="smallSystemBold"/>
                                                 </buttonCell>
@@ -292,7 +292,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="308" height="748"/>
                                         <subviews>
                                             <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="25" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" translatesAutoresizingMaskIntoConstraints="NO" id="SwP-F7-kR8">
-                                                <rect key="frame" x="56.5" y="703" width="195" height="40"/>
+                                                <rect key="frame" x="57" y="703" width="195" height="40"/>
                                                 <subviews>
                                                     <button toolTip="make a new particle system" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bie-dY-cC9">
                                                         <rect key="frame" x="0.0" y="4" width="30" height="32"/>
@@ -391,7 +391,7 @@
                                                                 </textFieldCell>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="S7d-z9-fyM">
-                                                                <rect key="frame" x="90" y="1.5" width="150" height="22"/>
+                                                                <rect key="frame" x="90" y="2" width="150" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="150" id="KqZ-40-4gb"/>
                                                                 </constraints>
@@ -400,6 +400,9 @@
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="bWX-g6-Nbq" id="BWv-zC-8LO"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <constraints>
@@ -428,12 +431,12 @@
                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
-                                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="paB-wP-6tM">
-                                                                <rect key="frame" x="90" y="1.5" width="100" height="22"/>
+                                                            <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paB-wP-6tM">
+                                                                <rect key="frame" x="90" y="4" width="100" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="100" id="vXo-BA-gar"/>
                                                                 </constraints>
-                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="Eny-V3-vVl">
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" alignment="center" drawsBackground="YES" id="Eny-V3-vVl">
                                                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="L9C-FD-EAU"/>
                                                                     <font key="font" metaFont="system"/>
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -614,7 +617,7 @@
                                                                 </textFieldCell>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pKa-pB-Dnu">
-                                                                <rect key="frame" x="90" y="1.5" width="50" height="22"/>
+                                                                <rect key="frame" x="90" y="2" width="50" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="QAi-M4-CqY"/>
                                                                 </constraints>
@@ -624,9 +627,12 @@
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="bWX-g6-Nbq" id="9WN-9F-x2w"/>
+                                                                </connections>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KTR-le-9Wr">
-                                                                <rect key="frame" x="150" y="1.5" width="50" height="22"/>
+                                                                <rect key="frame" x="150" y="2" width="50" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="KpN-3V-Vtb"/>
                                                                 </constraints>
@@ -636,6 +642,9 @@
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="bWX-g6-Nbq" id="00p-qq-NPG"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <constraints>
@@ -667,7 +676,7 @@
                                                                 </textFieldCell>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4HK-48-A3v">
-                                                                <rect key="frame" x="90" y="1.5" width="50" height="22"/>
+                                                                <rect key="frame" x="90" y="2" width="50" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="Cb1-z1-jZv"/>
                                                                 </constraints>
@@ -677,9 +686,12 @@
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="O0J-uz-5A7" id="vaX-ch-anH"/>
+                                                                </connections>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C6J-hq-K66">
-                                                                <rect key="frame" x="150" y="1.5" width="50" height="22"/>
+                                                                <rect key="frame" x="150" y="2" width="50" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="EXJ-iF-h7h"/>
                                                                 </constraints>
@@ -689,9 +701,12 @@
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="bWX-g6-Nbq" id="47n-VU-r3m"/>
+                                                                </connections>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gLP-YB-0A3">
-                                                                <rect key="frame" x="210" y="1.5" width="50" height="22"/>
+                                                                <rect key="frame" x="210" y="2" width="50" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="CQd-We-bT4"/>
                                                                 </constraints>
@@ -701,6 +716,9 @@
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="bWX-g6-Nbq" id="L6R-rF-zzy"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <constraints>
@@ -734,7 +752,7 @@
                                                                 </textFieldCell>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9zL-yq-Wnd">
-                                                                <rect key="frame" x="90" y="1.5" width="50" height="22"/>
+                                                                <rect key="frame" x="90" y="2" width="50" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="aiF-8u-Mdn"/>
                                                                 </constraints>
@@ -744,9 +762,12 @@
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="bWX-g6-Nbq" id="aCc-07-MER"/>
+                                                                </connections>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dvc-SN-d0r">
-                                                                <rect key="frame" x="150" y="1.5" width="50" height="22"/>
+                                                                <rect key="frame" x="150" y="2" width="50" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="ItN-Nm-AXq"/>
                                                                 </constraints>
@@ -756,9 +777,12 @@
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="bWX-g6-Nbq" id="1LL-0G-LE5"/>
+                                                                </connections>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FEl-1V-9R7">
-                                                                <rect key="frame" x="210" y="1.5" width="50" height="22"/>
+                                                                <rect key="frame" x="210" y="2" width="50" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="SrZ-Hz-OEN"/>
                                                                 </constraints>
@@ -768,6 +792,9 @@
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="bWX-g6-Nbq" id="R9g-wI-gnj"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <constraints>
@@ -800,8 +827,8 @@
                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
-                                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p4q-mo-Hp7">
-                                                                <rect key="frame" x="90" y="1.5" width="50" height="22"/>
+                                                            <textField verticalHuggingPriority="750" misplaced="YES" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="p4q-mo-Hp7">
+                                                                <rect key="frame" x="90" y="2" width="50" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="69F-to-cRt"/>
                                                                 </constraints>
@@ -811,9 +838,12 @@
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="bWX-g6-Nbq" id="I4n-nn-xfw"/>
+                                                                </connections>
                                                             </textField>
-                                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2p5-ea-fPI">
-                                                                <rect key="frame" x="150" y="1.5" width="50" height="22"/>
+                                                            <textField verticalHuggingPriority="750" misplaced="YES" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="2p5-ea-fPI">
+                                                                <rect key="frame" x="150" y="2" width="50" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="Gfn-6d-Jhq"/>
                                                                 </constraints>
@@ -823,9 +853,12 @@
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="bWX-g6-Nbq" id="xm5-6s-ncl"/>
+                                                                </connections>
                                                             </textField>
-                                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bw2-Nn-syN">
-                                                                <rect key="frame" x="210" y="1.5" width="50" height="22"/>
+                                                            <textField verticalHuggingPriority="750" misplaced="YES" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="Bw2-Nn-syN">
+                                                                <rect key="frame" x="210" y="2" width="50" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="CVA-i0-IcP"/>
                                                                 </constraints>
@@ -835,6 +868,9 @@
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="bWX-g6-Nbq" id="Y9M-2v-06W"/>
+                                                                </connections>
                                                             </textField>
                                                         </beginningViews>
                                                         <constraints>
@@ -879,17 +915,17 @@
                                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1n-kY-Fce">
                                                 <rect key="frame" x="0.0" y="0.0" width="308" height="337"/>
                                                 <clipView key="contentView" id="grP-0b-xAo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="308" height="337"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="293" height="337"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <textView editable="NO" importsGraphics="NO" horizontallyResizable="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="vo3-8j-LAj">
-                                                            <rect key="frame" x="0.0" y="0.0" width="308" height="337"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="293" height="337"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <size key="minSize" width="308" height="337"/>
+                                                            <size key="minSize" width="293" height="337"/>
                                                             <size key="maxSize" width="642" height="10000000"/>
                                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <size key="minSize" width="308" height="337"/>
+                                                            <size key="minSize" width="293" height="337"/>
                                                             <size key="maxSize" width="642" height="10000000"/>
                                                         </textView>
                                                     </subviews>
@@ -900,7 +936,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                                 <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="yIK-qb-B3w">
-                                                    <rect key="frame" x="292" y="0.0" width="16" height="337"/>
+                                                    <rect key="frame" x="293" y="0.0" width="15" height="337"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                             </scrollView>
@@ -971,7 +1007,7 @@
         </window>
     </objects>
     <resources>
-        <image name="491F65B8-74A9-4297-9867-F7D88D8996B8" width="1" height="1">
+        <image name="CAA8CA5F-8E90-4E71-B2BB-00D56598F684" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

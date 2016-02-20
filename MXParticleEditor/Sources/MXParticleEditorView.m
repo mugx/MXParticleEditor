@@ -43,8 +43,17 @@
 - (void)awakeFromNib
 {
   [self refreshButtons];
+  self.json = [@{} mutableCopy];
   self.textView.delegate = self;
   [self.colorButton addObserver:self forKeyPath:@"color" options:0 context:NULL];
+  
+  NSString *fileName = @"particleSystemTemplate.json";
+  NSString *file = [[NSBundle mainBundle] pathForResource:[fileName stringByDeletingPathExtension] ofType:[fileName pathExtension]];
+  NSString *jsonAsString = [NSString stringWithContentsOfFile:file encoding:NSASCIIStringEncoding error:nil];
+  NSData *data = [jsonAsString dataUsingEncoding:NSASCIIStringEncoding];
+  self.json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+  self.json = [NSMutableDictionary dictionaryWithDictionary:self.json];
+  [self refreshButtons];
 }
 
 - (void)dealloc
@@ -52,16 +61,8 @@
   [self.colorButton removeObserver:self forKeyPath:@"color"];
 }
 
-- (BOOL)textView:(NSTextView *)textView shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(nullable NSString *)replacementString
-{
-  //--- check if is a json ---//
-  //  NSData *data = [textView.string dataUsingEncoding:NSASCIIStringEncoding];
-  //  id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-  //  [self.glView.scene.particleManager loadParticleSystem:result];
-  return YES;
-}
-
 #pragma mark - Refresh
+
 - (void)feedModelPopup
 {
   [self.modelPopupButton removeAllItems];
@@ -179,17 +180,42 @@
   self.textView.string = [self.json prettyJson];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-  self.json[@"color"][@"r"] = [NSString stringWithFormat:@"%.2f", self.colorButton.color.redComponent];
-  self.json[@"color"][@"g"] = [NSString stringWithFormat:@"%.2f", self.colorButton.color.greenComponent];
-  self.json[@"color"][@"b"] = [NSString stringWithFormat:@"%.2f", self.colorButton.color.blueComponent];
-    self.textView.string = [self.json prettyJson];
-}
-
 - (IBAction)modelPopupTouched:(id)sender
 {
   //  NSLog(@"My NSPopupButton selected value is: %@", [(NSPopUpButton *) sender titleOfSelectedItem]);
+}
+
+#pragma mark - Observer Stuff
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+  //--- update color ---//
+  self.json[@"color"][@"r"] = [NSString stringWithFormat:@"%.2f", self.colorButton.color.redComponent];
+  self.json[@"color"][@"g"] = [NSString stringWithFormat:@"%.2f", self.colorButton.color.greenComponent];
+  self.json[@"color"][@"b"] = [NSString stringWithFormat:@"%.2f", self.colorButton.color.blueComponent];
+  
+  self.textView.string = [self.json prettyJson];
+}
+
+- (BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor
+{
+  //--- update name ----//
+  self.json[@"particleSystem"] = self.particleSystemName.stringValue;
+  
+  //--- update velocity ---//
+  self.json[@"velocity"][@"x"] = [NSString stringWithFormat:@"%.5f", [[self.velocity_x.stringValue stringByReplacingOccurrencesOfString:@"," withString:@"."] floatValue]];
+  self.json[@"velocity"][@"y"] = [NSString stringWithFormat:@"%.5f", [[self.velocity_y.stringValue stringByReplacingOccurrencesOfString:@"," withString:@"."] floatValue]];
+  self.json[@"velocity"][@"z"] = [NSString stringWithFormat:@"%.5f", [[self.velocity_z.stringValue stringByReplacingOccurrencesOfString:@"," withString:@"."] floatValue]];
+  
+  //--- update acceleration ---//
+  self.json[@"acceleration"][@"x"] = [NSString stringWithFormat:@"%.5f", [[self.acceleration_x.stringValue stringByReplacingOccurrencesOfString:@"," withString:@"."] floatValue]];
+  self.json[@"acceleration"][@"y"] = [NSString stringWithFormat:@"%.5f", [[self.acceleration_y.stringValue stringByReplacingOccurrencesOfString:@"," withString:@"."] floatValue]];
+  self.json[@"acceleration"][@"z"] = [NSString stringWithFormat:@"%.5f", [[self.acceleration_z.stringValue stringByReplacingOccurrencesOfString:@"," withString:@"."] floatValue]];
+  
+  
+  self.textView.string = [self.json prettyJson];
+
+  return YES;
 }
 
 @end
