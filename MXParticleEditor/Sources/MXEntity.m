@@ -22,9 +22,9 @@
   self.textureID = [[MXGameEngine sharedInstance].textureManager loadTexture:dictionary[@"texture"]];
   self.mesh = [[MXGameEngine sharedInstance].meshManager loadMesh:dictionary[@"model"]];
   self.scale = GLKVector3Make([dictionary[@"scale"] floatValue], [dictionary[@"scale"] floatValue], [dictionary[@"scale"] floatValue]);
-  self.rotation = [MXMathUtils GLKVector3Make:dictionary[@"rotation"]];
-  self.position = [MXMathUtils GLKVector3Make:dictionary[@"position"]];
-  self.velocity = [MXMathUtils GLKVector3Make:dictionary[@"velocity"]];
+  self.rotation = GLKVector3(dictionary[@"rotation"]);
+  self.position = GLKVector3(dictionary[@"position"]);
+  self.velocity = GLKVector3(dictionary[@"velocity"]);
   self.initialVelocity = self.velocity;
   return self;
 }

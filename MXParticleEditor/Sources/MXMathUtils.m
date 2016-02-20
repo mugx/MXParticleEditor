@@ -10,9 +10,4 @@
 
 @implementation MXMathUtils
 
-+ (GLKVector3)GLKVector3Make:(NSDictionary *)dictionary
-{
-  return GLKVector3Make([dictionary[@"x"] floatValue], [dictionary[@"y"] floatValue], [dictionary[@"z"] floatValue]);
-}
-
 @end

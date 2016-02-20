@@ -33,10 +33,10 @@
   self.dictionary = dictionary;
   
   self.textureID = [[MXGameEngine sharedInstance].textureManager loadTexture:dictionary[@"texture"]];
-  self.scale = [MXMathUtils GLKVector3Make:dictionary[@"scale"]];
-  self.colorMaterial = GLKVectorRGBMake(dictionary[@"color"]);
+  self.scale = GLKVector3(dictionary[@"scale"]);
+  self.colorMaterial = GLKVectorRGB(dictionary[@"color"]);
   self.mesh = [[MXGameEngine sharedInstance].meshManager loadMesh:dictionary[@"model"]];
-  self.centerOfCoordinateSystemOffset = [MXMathUtils GLKVector3Make:dictionary[@"centerOfCoordinateSystemOffset"]];
+  self.centerOfCoordinateSystemOffset = GLKVector3(dictionary[@"centerOfCoordinateSystemOffset"]);
   
   self.fade = RAND([dictionary[@"fade"][@"min"] floatValue],
                    [dictionary[@"fade"][@"max"] floatValue]);
@@ -49,7 +49,7 @@
   }
   else if (dictionary[@"scale"][@"x"])
   {
-    self.scale = [MXMathUtils GLKVector3Make:dictionary[@"scale"]];
+    self.scale = GLKVector3(dictionary[@"scale"]);
   }
   
   self.position = GLKVector3Make(0, 0, 0);

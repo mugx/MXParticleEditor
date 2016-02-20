@@ -19,9 +19,9 @@
 {
   self = [super init];
   _sceneManager = sceneManager;
-  _eye = [MXMathUtils GLKVector3Make:dictionary[@"camera"][@"eye"]];
-  _center = [MXMathUtils GLKVector3Make:dictionary[@"camera"][@"center"]];
-  _velocity = [MXMathUtils GLKVector3Make:dictionary[@"camera"][@"velocity"]];
+  _eye = GLKVector3(dictionary[@"camera"][@"eye"]);
+  _center = GLKVector3(dictionary[@"camera"][@"center"]);
+  _velocity = GLKVector3(dictionary[@"camera"][@"velocity"]);
   _zoomFactor = 1.0f;
   return self;
 }

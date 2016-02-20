@@ -18,9 +18,21 @@
 @property IBOutlet NSButton *loadButton;
 
 //@property IBOutlet NSButton *loadButton;
+@property IBOutlet NSTextField *particleSystemName;
+@property IBOutlet NSTextField *count;
 @property IBOutlet NSButton *textureButton;
 @property IBOutlet NSColorWell *colorButton;
-
+@property IBOutlet NSTextField *fade_min;
+@property IBOutlet NSTextField *fade_max;
+@property IBOutlet NSTextField *scale_x;
+@property IBOutlet NSTextField *scale_y;
+@property IBOutlet NSTextField *scale_z;
+@property IBOutlet NSTextField *velocity_x;
+@property IBOutlet NSTextField *velocity_y;
+@property IBOutlet NSTextField *velocity_z;
+@property IBOutlet NSTextField *acceleration_x;
+@property IBOutlet NSTextField *acceleration_y;
+@property IBOutlet NSTextField *acceleration_z;
 @property(nonatomic,weak) id json;
 @end
 
@@ -51,9 +63,46 @@
   self.loadButton.enabled = YES;
   
   //--- refreshing particle system controls ---//
-  [self.textureButton setImage:[NSImage imageNamed:self.json[@"texture"]]];
-  GLKVector3 color = GLKVectorRGBMake(self.json[@"color"]);
-  [self.colorButton setColor:[NSColor colorWithRed:color.r green:color.g blue:color.b alpha:1.0]];
+  
+  if (self.json != nil)
+  {
+    //--- name ---//
+    self.particleSystemName.stringValue = self.json[@"particleSystem"];
+    
+    //--- count ---//
+    self.count.stringValue = [NSString stringWithFormat:@"%d", [self.json[@"count"] intValue]];
+    
+    //--- texture ---//
+    [self.textureButton setImage:[NSImage imageNamed:self.json[@"texture"]]];
+    
+    //--- color ---//
+    GLKVector3 color = GLKVectorRGB(self.json[@"color"]);
+    [self.colorButton setColor:[NSColor colorWithRed:color.r green:color.g blue:color.b alpha:1.0]];
+    
+    //--- fade ---//
+    float fade_min = [self.json[@"fade"][@"min"] floatValue];
+    float fade_max = [self.json[@"fade"][@"max"] floatValue];
+    self.fade_min.stringValue = [NSString stringWithFormat:@"%.2f", fade_min];
+    self.fade_max.stringValue = [NSString stringWithFormat:@"%.2f", fade_max];
+    
+    //--- scale ---//
+    GLKVector3 scale = GLKVector3(self.json[@"scale"]);
+    self.scale_x.stringValue = [NSString stringWithFormat:@"%.2f", scale.x];
+    self.scale_y.stringValue = [NSString stringWithFormat:@"%.2f", scale.y];
+    self.scale_z.stringValue = [NSString stringWithFormat:@"%.2f", scale.z];
+    
+    //--- velocity ---//
+    GLKVector3 velocity = GLKVector3(self.json[@"velocity"]);
+    self.velocity_x.stringValue = [NSString stringWithFormat:@"%.2f", velocity.x];
+    self.velocity_y.stringValue = [NSString stringWithFormat:@"%.2f", velocity.y];
+    self.velocity_z.stringValue = [NSString stringWithFormat:@"%.2f", velocity.z];
+    
+    //--- acceleration ---//
+    GLKVector3 acceleration = GLKVector3(self.json[@"acceleration"]);
+    self.acceleration_x.stringValue = [NSString stringWithFormat:@"%.2f", acceleration.x];
+    self.acceleration_y.stringValue = [NSString stringWithFormat:@"%.2f", acceleration.y];
+    self.acceleration_z.stringValue = [NSString stringWithFormat:@"%.2f", acceleration.z];
+  }
 }
 
 #pragma mark - Actions
