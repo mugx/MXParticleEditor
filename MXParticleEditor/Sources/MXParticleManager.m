@@ -86,7 +86,6 @@
   {
     if (particle.isVisible)
     {
-      [particle updateCenterOfCoordinateSystem:particle.parentEntity];
       [particle update:timeSinceLastUpdate];
     }
     else if (particle.autoRespawn)

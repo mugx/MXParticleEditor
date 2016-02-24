@@ -11,6 +11,9 @@
 #import "MXUtils.h"
 #import "NSDictionary+json.h"
 
+#define STRING_TO_FLOAT(s) [NSString stringWithFormat:@"%.5f", [[s stringByReplacingOccurrencesOfString:@"," withString:@"."] floatValue]];
+#define FLOAT_TO_STRING(f) [[NSString stringWithFormat:@"%.2f", f] stringByReplacingOccurrencesOfString:@"." withString:@","]
+
 @interface MXParticleEditorView()
 @property IBOutlet NSTextView *textView;
 @property IBOutlet NSButton *historyButton;
@@ -35,6 +38,9 @@
 @property IBOutlet NSTextField *acceleration_x;
 @property IBOutlet NSTextField *acceleration_y;
 @property IBOutlet NSTextField *acceleration_z;
+@property IBOutlet NSTextField *coordinateSystem_x;
+@property IBOutlet NSTextField *coordinateSystem_y;
+@property IBOutlet NSTextField *coordinateSystem_z;
 @property(nonatomic,strong) NSMutableDictionary *json;
 @end
 
@@ -100,26 +106,26 @@
     //--- fade ---//
     float fade_min = [self.json[@"fade"][@"min"] floatValue];
     float fade_max = [self.json[@"fade"][@"max"] floatValue];
-    self.fade_min.stringValue = [NSString stringWithFormat:@"%.2f", fade_min];
-    self.fade_max.stringValue = [NSString stringWithFormat:@"%.2f", fade_max];
+    self.fade_min.stringValue = FLOAT_TO_STRING(fade_min);
+    self.fade_max.stringValue = FLOAT_TO_STRING(fade_max);
     
     //--- scale ---//
     GLKVector3 scale = GLKVector3(self.json[@"scale"]);
-    self.scale_x.stringValue = [NSString stringWithFormat:@"%.2f", scale.x];
-    self.scale_y.stringValue = [NSString stringWithFormat:@"%.2f", scale.y];
-    self.scale_z.stringValue = [NSString stringWithFormat:@"%.2f", scale.z];
+    self.scale_x.stringValue = FLOAT_TO_STRING(scale.x);
+    self.scale_y.stringValue = FLOAT_TO_STRING(scale.y);
+    self.scale_z.stringValue = FLOAT_TO_STRING(scale.z);
     
     //--- velocity ---//
     GLKVector3 velocity = GLKVector3(self.json[@"velocity"]);
-    self.velocity_x.stringValue = [NSString stringWithFormat:@"%.2f", velocity.x];
-    self.velocity_y.stringValue = [NSString stringWithFormat:@"%.2f", velocity.y];
-    self.velocity_z.stringValue = [NSString stringWithFormat:@"%.2f", velocity.z];
+    self.velocity_x.stringValue = FLOAT_TO_STRING(velocity.x);
+    self.velocity_y.stringValue = FLOAT_TO_STRING(velocity.y);
+    self.velocity_z.stringValue = FLOAT_TO_STRING(velocity.z);
     
     //--- acceleration ---//
     GLKVector3 acceleration = GLKVector3(self.json[@"acceleration"]);
-    self.acceleration_x.stringValue = [NSString stringWithFormat:@"%.2f", acceleration.x];
-    self.acceleration_y.stringValue = [NSString stringWithFormat:@"%.2f", acceleration.y];
-    self.acceleration_z.stringValue = [NSString stringWithFormat:@"%.2f", acceleration.z];
+    self.acceleration_x.stringValue = FLOAT_TO_STRING(acceleration.z);
+    self.acceleration_y.stringValue = FLOAT_TO_STRING(acceleration.z);
+    self.acceleration_z.stringValue = FLOAT_TO_STRING(acceleration.z);
   }
 }
 
@@ -190,9 +196,9 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
   //--- update color ---//
-  self.json[@"color"][@"r"] = [NSString stringWithFormat:@"%.2f", self.colorButton.color.redComponent];
-  self.json[@"color"][@"g"] = [NSString stringWithFormat:@"%.2f", self.colorButton.color.greenComponent];
-  self.json[@"color"][@"b"] = [NSString stringWithFormat:@"%.2f", self.colorButton.color.blueComponent];
+  self.json[@"color"][@"r"] = FLOAT_TO_STRING(self.colorButton.color.redComponent);
+  self.json[@"color"][@"g"] = FLOAT_TO_STRING(self.colorButton.color.greenComponent);
+  self.json[@"color"][@"b"] = FLOAT_TO_STRING(self.colorButton.color.blueComponent);
   
   self.textView.string = [self.json prettyJson];
 }
@@ -201,17 +207,24 @@
 {
   //--- update name ----//
   self.json[@"particleSystem"] = self.particleSystemName.stringValue;
-  
+
+  //--- update fade ---//
+  self.json[@"fade"][@"min"] = STRING_TO_FLOAT(self.fade_min.stringValue);
+  self.json[@"fade"][@"max"] = STRING_TO_FLOAT(self.fade_max.stringValue);
+
   //--- update velocity ---//
-  self.json[@"velocity"][@"x"] = [NSString stringWithFormat:@"%.5f", [[self.velocity_x.stringValue stringByReplacingOccurrencesOfString:@"," withString:@"."] floatValue]];
-  self.json[@"velocity"][@"y"] = [NSString stringWithFormat:@"%.5f", [[self.velocity_y.stringValue stringByReplacingOccurrencesOfString:@"," withString:@"."] floatValue]];
-  self.json[@"velocity"][@"z"] = [NSString stringWithFormat:@"%.5f", [[self.velocity_z.stringValue stringByReplacingOccurrencesOfString:@"," withString:@"."] floatValue]];
+  self.json[@"velocity"][@"x"] = STRING_TO_FLOAT(self.velocity_x.stringValue);
+  self.json[@"velocity"][@"y"] = STRING_TO_FLOAT(self.velocity_y.stringValue);
+  self.json[@"velocity"][@"z"] = STRING_TO_FLOAT(self.velocity_z.stringValue);
+
   
   //--- update acceleration ---//
-  self.json[@"acceleration"][@"x"] = [NSString stringWithFormat:@"%.5f", [[self.acceleration_x.stringValue stringByReplacingOccurrencesOfString:@"," withString:@"."] floatValue]];
-  self.json[@"acceleration"][@"y"] = [NSString stringWithFormat:@"%.5f", [[self.acceleration_y.stringValue stringByReplacingOccurrencesOfString:@"," withString:@"."] floatValue]];
-  self.json[@"acceleration"][@"z"] = [NSString stringWithFormat:@"%.5f", [[self.acceleration_z.stringValue stringByReplacingOccurrencesOfString:@"," withString:@"."] floatValue]];
+  self.json[@"acceleration"][@"x"] = STRING_TO_FLOAT(self.acceleration_x.stringValue);
+  self.json[@"acceleration"][@"y"] = STRING_TO_FLOAT(self.acceleration_y.stringValue);
+  self.json[@"acceleration"][@"z"] = STRING_TO_FLOAT(self.acceleration_z.stringValue);
   
+  //---
+  //self.cen
   
   self.textView.string = [self.json prettyJson];
 

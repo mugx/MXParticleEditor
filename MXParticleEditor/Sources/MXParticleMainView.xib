@@ -245,7 +245,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="M8V-GV-zXu"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="inline" title="x1" bezelStyle="inline" image="CAA8CA5F-8E90-4E71-B2BB-00D56598F684" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="BrL-Kf-Ccg">
+                                                <buttonCell key="cell" type="inline" title="x1" bezelStyle="inline" image="506C2689-AFB9-4CBB-B8C2-4607A08707A7" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="BrL-Kf-Ccg">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="smallSystemBold"/>
                                                 </buttonCell>
@@ -431,7 +431,7 @@
                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
-                                                            <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paB-wP-6tM">
+                                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="paB-wP-6tM">
                                                                 <rect key="frame" x="90" y="4" width="100" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="100" id="vXo-BA-gar"/>
@@ -828,7 +828,7 @@
                                                                 </textFieldCell>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" misplaced="YES" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="p4q-mo-Hp7">
-                                                                <rect key="frame" x="90" y="2" width="50" height="21"/>
+                                                                <rect key="frame" x="90" y="1.5" width="0.0" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="69F-to-cRt"/>
                                                                 </constraints>
@@ -843,7 +843,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" misplaced="YES" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="2p5-ea-fPI">
-                                                                <rect key="frame" x="150" y="2" width="50" height="21"/>
+                                                                <rect key="frame" x="100" y="1.5" width="0.0" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="Gfn-6d-Jhq"/>
                                                                 </constraints>
@@ -858,7 +858,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" misplaced="YES" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="Bw2-Nn-syN">
-                                                                <rect key="frame" x="210" y="2" width="50" height="21"/>
+                                                                <rect key="frame" x="110" y="1.5" width="150" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="CVA-i0-IcP"/>
                                                                 </constraints>
@@ -1007,7 +1007,7 @@
         </window>
     </objects>
     <resources>
-        <image name="CAA8CA5F-8E90-4E71-B2BB-00D56598F684" width="1" height="1">
+        <image name="506C2689-AFB9-4CBB-B8C2-4607A08707A7" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

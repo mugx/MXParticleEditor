@@ -16,6 +16,7 @@
 - (instancetype)init:(NSDictionary *)dictionary withScene:(MXSceneManager *)sceneManager;
 - (BOOL)isColliding:(MXEntity *)otherEntity;
 - (float)offset;
+- (void)updateCenterOfCoordinateSystem;
 - (void)update:(NSTimeInterval)timeSinceLastUpdate;
 - (void)draw;
 @property(nonatomic,weak) MXSceneManager *sceneManager;
@@ -25,7 +26,9 @@
 
 @property(nonatomic,assign) GLuint textureID;
 @property(nonatomic,assign) GLKVector3 position;
+@property(nonatomic,assign) BOOL isHangedToTheParent;
 @property(nonatomic,assign) GLKVector3 centerOfCoordinateSystem;
+@property(nonatomic,assign) GLKVector3 centerOfCoordinateSystemOffset;
 @property(nonatomic,assign) GLKVector3 target;
 @property(nonatomic,assign) GLKVector3 velocity;
 @property(nonatomic,assign) GLKVector3 initialVelocity;

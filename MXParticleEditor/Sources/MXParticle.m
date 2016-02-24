@@ -36,7 +36,6 @@
   self.scale = GLKVector3(dictionary[@"scale"]);
   self.colorMaterial = GLKVectorRGB(dictionary[@"color"]);
   self.mesh = [[MXGameEngine sharedInstance].meshManager loadMesh:dictionary[@"model"]];
-  self.centerOfCoordinateSystemOffset = GLKVector3(dictionary[@"centerOfCoordinateSystemOffset"]);
   
   self.fade = RAND([dictionary[@"fade"][@"min"] floatValue],
                    [dictionary[@"fade"][@"max"] floatValue]);
@@ -60,17 +59,7 @@
                                      self.velocity.y * [dictionary[@"acceleration"][@"y"] floatValue],
                                      0);
   
-  [self updateCenterOfCoordinateSystem:parentEntity];
   [self update:0];
-}
-
-- (void)updateCenterOfCoordinateSystem:(MXEntity *)parentEntity
-{
-  if (parentEntity)
-  {
-    float posy = -parentEntity.mesh.boundingVolumeRadius * parentEntity.scale.y + self.centerOfCoordinateSystemOffset.y;
-    self.centerOfCoordinateSystem = GLKVector3Make(parentEntity.position.x, posy + parentEntity.position.y, parentEntity.position.z);
-  }
 }
 
 - (void)update:(NSTimeInterval)timeSinceLastUpdate

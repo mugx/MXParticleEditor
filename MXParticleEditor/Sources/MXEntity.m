@@ -73,10 +73,21 @@
 
 #pragma mark - Update & Draw
 
+- (void)updateCenterOfCoordinateSystem
+{
+  if (self.parentEntity && self.isHangedToTheParent)
+  {
+    float posy = -self.parentEntity.mesh.boundingVolumeRadius * self.parentEntity.scale.y + self.centerOfCoordinateSystemOffset.y;
+    self.centerOfCoordinateSystem = GLKVector3Make(self.parentEntity.position.x, posy + self.parentEntity.position.y, self.parentEntity.position.z);
+  }
+}
+
 // chasing camera: http://twoflygames.tumblr.com
 - (void)update:(NSTimeInterval)timeSinceLastUpdate
 {
   if (!self.isVisible) return;
+  
+  [self updateCenterOfCoordinateSystem];
   
   self.velocity = GLKVector3Add(self.velocity, GLKVector3MultiplyScalar(self.acceleration, timeSinceLastUpdate));
   self.position = GLKVector3Add(self.position, GLKVector3MultiplyScalar(self.velocity, timeSinceLastUpdate));
